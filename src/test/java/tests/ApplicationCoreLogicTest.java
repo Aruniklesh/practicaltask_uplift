@@ -43,7 +43,7 @@ public class ApplicationCoreLogicTest extends BaseTest {
                 {"100", "Fortnightly", "fortnightly", "Title-case Fortnightly"},
                 {"100", "FORTNIGHTLY", "fortnightly", "Uppercase FORTNIGHTLY"},
                 {"100", "monthly", "monthly", "Exact lowercase monthly"},
-                {"100", "Monthly", "monthly", "Title-case Monthly (same form as defect M004)"},
+                {"100", "Monthly", "monthly", "Title-case Monthly"},
                 {"100", "MONTHLY", "monthly", "Uppercase MONTHLY"},
                 {"100", "annual", "annual", "Exact lowercase annual"},
                 {"100", "Annual", "annual", "Title-case Annual"},
@@ -71,7 +71,7 @@ public class ApplicationCoreLogicTest extends BaseTest {
      */
     @Test(
             dataProvider = "frequencyCaseVariants",
-            description = "Direct invocation of the app's own annualFor() JS function to prove R1/R2 case-insensitivity (or its absence) across every frequency, bypassing the Calculator dropdown's fixed-lowercase-value limitation."
+            description = "annualFor() case-insensitivity check (R1/R2)"
     )
     public void testAnnualForDirectInvocation(String amount, String frequencySubmitted, String canonicalFrequency, String description) {
         getDriver().get(baseUrl);
@@ -109,7 +109,7 @@ public class ApplicationCoreLogicTest extends BaseTest {
      * weekly multiplier (52), flagged as a potential risk (silent fallback masking bad
      * data) rather than a confirmed defect.
      */
-    @Test(description = "Documents (does not assert spec compliance for) the app's fallback behavior for a completely unsupported frequency string")
+    @Test(description = "Unsupported frequency fallback behavior (documented, not a defect assertion)")
     public void testUnsupportedFrequencyFallbackBehaviorIsDocumented() {
         getDriver().get(baseUrl);
         JavascriptExecutor js = (JavascriptExecutor) getDriver();

@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>5/4/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Oct 30 22:08:53 IST 2026</td>
+<td>Started on:</td><td>Fri Oct 30 22:18:39 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>4 seconds (4680 ms)</td>
+<tr><td>Total time:</td><td>6 seconds (6119 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,28 +76,28 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.MembersValidationTest.testMemberRowCalculations()'><b>testMemberRowCalculations</b><br>Test class: tests.MembersValidationTest<br>Test method: Validates on-screen member values against independent calculations from data/members.json<br>Parameters: Member{memberId='M004', name='Conor Doyle', frequency='Monthly', contributionAmount=150, unitsHeld=610.0000001, unitPrice=4.0021, nextOrderUnits=3.25}</td>
+<td title='tests.MembersValidationTest.testMemberRowCalculations()'><b>testMemberRowCalculations</b><br>Test class: tests.MembersValidationTest<br>Test method: Member field validation vs data/members.json<br>Parameters: Member{memberId='M002', name='Liam Walsh', frequency='fortnightly', contributionAmount=50, unitsHeld=980.1234567, unitPrice=2.1189, nextOrderUnits=4.5}</td>
 <td><div><pre>java.lang.AssertionError: The following asserts failed:
 	
-Member ID: M004
+Member ID: M002
 Field: Annual Contribution
-Expected: €1,800.00
-Actual: €7,800.00
+Expected: €1,300.00
+Actual: €1,200.00
 Status: FAILED
 Business Rule: R1 / R2
- expected [€1,800.00] but found [€7,800.00]
+ expected [€1,300.00] but found [€1,200.00]
 	at tests.MembersValidationTest.testMemberRowCalculations(MembersValidationTest.java:255)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1507906849", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1507906849'><pre>java.lang.AssertionError: The following asserts failed:
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1771935420", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1771935420'><pre>java.lang.AssertionError: The following asserts failed:
 	
-Member ID: M004
+Member ID: M002
 Field: Annual Contribution
-Expected: €1,800.00
-Actual: €7,800.00
+Expected: €1,300.00
+Actual: €1,200.00
 Status: FAILED
 Business Rule: R1 / R2
- expected [€1,800.00] but found [€7,800.00]
+ expected [€1,300.00] but found [€1,200.00]
 	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
 	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
 	at tests.MembersValidationTest.testMemberRowCalculations(MembersValidationTest.java:255)
@@ -135,66 +135,7 @@ Business Rule: R1 / R2
 <td>0</td>
 <td>tests.MembersValidationTest@4c60d6e9</td></tr>
 <tr>
-<td title='tests.MembersValidationTest.testMemberRowCalculations()'><b>testMemberRowCalculations</b><br>Test class: tests.MembersValidationTest<br>Test method: Validates on-screen member values against independent calculations from data/members.json<br>Parameters: Member{memberId='M008', name='Darragh Quinn', frequency='fortnightly', contributionAmount=25, unitsHeld=1.0000005, unitPrice=9.9999, nextOrderUnits=0.00006}</td>
-<td><div><pre>java.lang.AssertionError: The following asserts failed:
-	
-Member ID: M008
-Field: Annual Contribution
-Expected: €650.00
-Actual: €600.00
-Status: FAILED
-Business Rule: R1 / R2
- expected [€650.00] but found [€600.00]
-	at tests.MembersValidationTest.testMemberRowCalculations(MembersValidationTest.java:255)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1630192523", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1630192523'><pre>java.lang.AssertionError: The following asserts failed:
-	
-Member ID: M008
-Field: Annual Contribution
-Expected: €650.00
-Actual: €600.00
-Status: FAILED
-Business Rule: R1 / R2
- expected [€650.00] but found [€600.00]
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-	at tests.MembersValidationTest.testMemberRowCalculations(MembersValidationTest.java:255)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-</pre></div></td>
-<td>0</td>
-<td>tests.MembersValidationTest@4c60d6e9</td></tr>
-<tr>
-<td title='tests.MembersValidationTest.testMemberRowCalculations()'><b>testMemberRowCalculations</b><br>Test class: tests.MembersValidationTest<br>Test method: Validates on-screen member values against independent calculations from data/members.json<br>Parameters: Member{memberId='M007', name='Ciara Nolan', frequency='monthly', contributionAmount=75.5, unitsHeld=333.3333333, unitPrice=2.75, nextOrderUnits=0.00004}</td>
+<td title='tests.MembersValidationTest.testMemberRowCalculations()'><b>testMemberRowCalculations</b><br>Test class: tests.MembersValidationTest<br>Test method: Member field validation vs data/members.json<br>Parameters: Member{memberId='M007', name='Ciara Nolan', frequency='monthly', contributionAmount=75.5, unitsHeld=333.3333333, unitPrice=2.75, nextOrderUnits=0.00004}</td>
 <td><div><pre>java.lang.AssertionError: The following asserts failed:
 	
 Member ID: M007
@@ -206,8 +147,8 @@ Business Rule: R7
  expected [Blocked] but found [Ready]
 	at tests.MembersValidationTest.testMemberRowCalculations(MembersValidationTest.java:255)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace894735295", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace894735295'><pre>java.lang.AssertionError: The following asserts failed:
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace345723898", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace345723898'><pre>java.lang.AssertionError: The following asserts failed:
 	
 Member ID: M007
 Field: Order Status
@@ -253,28 +194,87 @@ Business Rule: R7
 <td>0</td>
 <td>tests.MembersValidationTest@4c60d6e9</td></tr>
 <tr>
-<td title='tests.MembersValidationTest.testMemberRowCalculations()'><b>testMemberRowCalculations</b><br>Test class: tests.MembersValidationTest<br>Test method: Validates on-screen member values against independent calculations from data/members.json<br>Parameters: Member{memberId='M002', name='Liam Walsh', frequency='fortnightly', contributionAmount=50, unitsHeld=980.1234567, unitPrice=2.1189, nextOrderUnits=4.5}</td>
+<td title='tests.MembersValidationTest.testMemberRowCalculations()'><b>testMemberRowCalculations</b><br>Test class: tests.MembersValidationTest<br>Test method: Member field validation vs data/members.json<br>Parameters: Member{memberId='M008', name='Darragh Quinn', frequency='fortnightly', contributionAmount=25, unitsHeld=1.0000005, unitPrice=9.9999, nextOrderUnits=0.00006}</td>
 <td><div><pre>java.lang.AssertionError: The following asserts failed:
 	
-Member ID: M002
+Member ID: M008
 Field: Annual Contribution
-Expected: €1,300.00
-Actual: €1,200.00
+Expected: €650.00
+Actual: €600.00
 Status: FAILED
 Business Rule: R1 / R2
- expected [€1,300.00] but found [€1,200.00]
+ expected [€650.00] but found [€600.00]
 	at tests.MembersValidationTest.testMemberRowCalculations(MembersValidationTest.java:255)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1631675519", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1631675519'><pre>java.lang.AssertionError: The following asserts failed:
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1789552525", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1789552525'><pre>java.lang.AssertionError: The following asserts failed:
 	
-Member ID: M002
+Member ID: M008
 Field: Annual Contribution
-Expected: €1,300.00
-Actual: €1,200.00
+Expected: €650.00
+Actual: €600.00
 Status: FAILED
 Business Rule: R1 / R2
- expected [€1,300.00] but found [€1,200.00]
+ expected [€650.00] but found [€600.00]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at tests.MembersValidationTest.testMemberRowCalculations(MembersValidationTest.java:255)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.MembersValidationTest@4c60d6e9</td></tr>
+<tr>
+<td title='tests.MembersValidationTest.testMemberRowCalculations()'><b>testMemberRowCalculations</b><br>Test class: tests.MembersValidationTest<br>Test method: Member field validation vs data/members.json<br>Parameters: Member{memberId='M004', name='Conor Doyle', frequency='Monthly', contributionAmount=150, unitsHeld=610.0000001, unitPrice=4.0021, nextOrderUnits=3.25}</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	
+Member ID: M004
+Field: Annual Contribution
+Expected: €1,800.00
+Actual: €7,800.00
+Status: FAILED
+Business Rule: R1 / R2
+ expected [€1,800.00] but found [€7,800.00]
+	at tests.MembersValidationTest.testMemberRowCalculations(MembersValidationTest.java:255)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace84624228", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace84624228'><pre>java.lang.AssertionError: The following asserts failed:
+	
+Member ID: M004
+Field: Annual Contribution
+Expected: €1,800.00
+Actual: €7,800.00
+Status: FAILED
+Business Rule: R1 / R2
+ expected [€1,800.00] but found [€7,800.00]
 	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
 	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
 	at tests.MembersValidationTest.testMemberRowCalculations(MembersValidationTest.java:255)
@@ -321,27 +321,27 @@ Business Rule: R1 / R2
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.MembersValidationTest.testMembersTableIntegrity()'><b>testMembersTableIntegrity</b><br>Test class: tests.MembersValidationTest<br>Test method: Verifies the rendered Members table has exactly one row per JSON member, with no missing or duplicate data-member-id values</td>
+<td title='tests.MembersValidationTest.testMemberRowCalculations()'><b>testMemberRowCalculations</b><br>Test class: tests.MembersValidationTest<br>Test method: Member field validation vs data/members.json<br>Parameters: Member{memberId='M005', name='Niamh Ryan', frequency='annual', contributionAmount=1200, unitsHeld=75.9876543, unitPrice=15.2, nextOrderUnits=0.75}</td>
 <td></td>
 <td>0</td>
 <td>tests.MembersValidationTest@4c60d6e9</td></tr>
 <tr>
-<td title='tests.MembersValidationTest.testMemberRowCalculations()'><b>testMemberRowCalculations</b><br>Test class: tests.MembersValidationTest<br>Test method: Validates on-screen member values against independent calculations from data/members.json<br>Parameters: Member{memberId='M005', name='Niamh Ryan', frequency='annual', contributionAmount=1200, unitsHeld=75.9876543, unitPrice=15.2, nextOrderUnits=0.75}</td>
+<td title='tests.MembersValidationTest.testMemberRowCalculations()'><b>testMemberRowCalculations</b><br>Test class: tests.MembersValidationTest<br>Test method: Member field validation vs data/members.json<br>Parameters: Member{memberId='M006', name='Sean Murphy', frequency='weekly', contributionAmount=0, unitsHeld=0, unitPrice=3.4567, nextOrderUnits=0}</td>
 <td></td>
 <td>0</td>
 <td>tests.MembersValidationTest@4c60d6e9</td></tr>
 <tr>
-<td title='tests.MembersValidationTest.testMemberRowCalculations()'><b>testMemberRowCalculations</b><br>Test class: tests.MembersValidationTest<br>Test method: Validates on-screen member values against independent calculations from data/members.json<br>Parameters: Member{memberId='M006', name='Sean Murphy', frequency='weekly', contributionAmount=0, unitsHeld=0, unitPrice=3.4567, nextOrderUnits=0}</td>
+<td title='tests.MembersValidationTest.testMembersTableIntegrity()'><b>testMembersTableIntegrity</b><br>Test class: tests.MembersValidationTest<br>Test method: Members table row count & duplicate-ID check</td>
 <td></td>
 <td>0</td>
 <td>tests.MembersValidationTest@4c60d6e9</td></tr>
 <tr>
-<td title='tests.MembersValidationTest.testMemberRowCalculations()'><b>testMemberRowCalculations</b><br>Test class: tests.MembersValidationTest<br>Test method: Validates on-screen member values against independent calculations from data/members.json<br>Parameters: Member{memberId='M001', name='Aoife Byrne', frequency='weekly', contributionAmount=10, unitsHeld=152.4381925, unitPrice=3.4567, nextOrderUnits=1.2345678}</td>
+<td title='tests.MembersValidationTest.testMemberRowCalculations()'><b>testMemberRowCalculations</b><br>Test class: tests.MembersValidationTest<br>Test method: Member field validation vs data/members.json<br>Parameters: Member{memberId='M001', name='Aoife Byrne', frequency='weekly', contributionAmount=10, unitsHeld=152.4381925, unitPrice=3.4567, nextOrderUnits=1.2345678}</td>
 <td></td>
 <td>0</td>
 <td>tests.MembersValidationTest@4c60d6e9</td></tr>
 <tr>
-<td title='tests.MembersValidationTest.testMemberRowCalculations()'><b>testMemberRowCalculations</b><br>Test class: tests.MembersValidationTest<br>Test method: Validates on-screen member values against independent calculations from data/members.json<br>Parameters: Member{memberId='M003', name='Siobhan Kelly', frequency='monthly', contributionAmount=200, unitsHeld=2450.75, unitPrice=1.9874, nextOrderUnits=12.0004}</td>
+<td title='tests.MembersValidationTest.testMemberRowCalculations()'><b>testMemberRowCalculations</b><br>Test class: tests.MembersValidationTest<br>Test method: Member field validation vs data/members.json<br>Parameters: Member{memberId='M003', name='Siobhan Kelly', frequency='monthly', contributionAmount=200, unitsHeld=2450.75, unitPrice=1.9874, nextOrderUnits=12.0004}</td>
 <td></td>
 <td>0</td>
 <td>tests.MembersValidationTest@4c60d6e9</td></tr>

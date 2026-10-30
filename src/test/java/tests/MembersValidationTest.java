@@ -57,7 +57,7 @@ public class MembersValidationTest extends BaseTest {
      * field test below only ever looks up rows by ID, so it would silently miss a
      * completely-missing member or a duplicated row; this test closes that gap.
      */
-    @Test(description = "Verifies the rendered Members table has exactly one row per JSON member, with no missing or duplicate data-member-id values")
+    @Test(description = "Members table row count & duplicate-ID check")
     public void testMembersTableIntegrity() {
         List<Member> expectedMembers = JsonUtils.readMembersFromJson(MEMBERS_JSON_PATH);
         MembersTablePage tablePage = new MembersTablePage(getDriver());
@@ -94,7 +94,7 @@ public class MembersValidationTest extends BaseTest {
      */
     @Test(
             dataProvider = "membersDataProvider",
-            description = "Validates on-screen member values against independent calculations from data/members.json"
+            description = "Member field validation vs data/members.json"
     )
     public void testMemberRowCalculations(Member member) {
         String memberId = member.getMemberId();

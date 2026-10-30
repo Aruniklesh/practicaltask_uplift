@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="25.307" tests="54" errors="0" skipped="0" failures="16">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="28.328" tests="54" errors="0" skipped="0" failures="16">
   <properties>
     <property name="java.specification.version" value="26"/>
     <property name="webdriver.chrome.driver" value="C:\Users\Arunnivetha\.cache\selenium\chromedriver\win64\155.0.8059.84\chromedriver.exe"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-26.0.2.1\bin"/>
-    <property name="sun.java.command" value="C:\Users\Arunnivetha\AppData\Local\Temp\surefire4169576424754185029\surefirebooter-20261030220835986_3.jar C:\Users\Arunnivetha\AppData\Local\Temp\surefire4169576424754185029 2026-10-30T22-08-35_836-jvmRun1 surefire-20261030220835986_1tmp surefire_0-20261030220835986_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Arunnivetha\AppData\Local\Temp\surefire14119691620735948921\surefirebooter-20261030221820335_3.jar C:\Users\Arunnivetha\AppData\Local\Temp\surefire14119691620735948921 2026-10-30T22-18-20_083-jvmRun1 surefire-20261030221820335_1tmp surefire_0-20261030221820335_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\Resume\PracticalTask\target\test-classes;D:\Resume\PracticalTask\target\classes;C:\Users\Arunnivetha\.m2\repository\org\seleniumhq\selenium\selenium-java\4.21.0\selenium-java-4.21.0.jar;C:\Users\Arunnivetha\.m2\repository\org\seleniumhq\selenium\selenium-api\4.21.0\selenium-api-4.21.0.jar;C:\Users\Arunnivetha\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.21.0\selenium-chrome-driver-4.21.0.jar;C:\Users\Arunnivetha\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\Arunnivetha\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.21.0\selenium-chromium-driver-4.21.0.jar;C:\Users\Arunnivetha\.m2\repository\org\seleniumhq\selenium\selenium-json\4.21.0\selenium-json-4.21.0.jar;C:\Users\Arunnivetha\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.21.0\selenium-manager-4.21.0.jar;C:\Users\Arunnivetha\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v123\4.21.0\selenium-devtools-v123-4.21.0.jar;C:\Users\Arunnivetha\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v124\4.21.0\selenium-devtools-v124-4.21.0.jar;C:\Users\Arunnivetha\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v125\4.21.0\selenium-devtools-v125-4.21.0.jar;C:\Users\Arunnivetha\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.21.0\selenium-devtools-v85-4.21.0.jar;C:\Users\Arunnivetha\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.21.0\selenium-edge-driver-4.21.0.jar;C:\Users\Arunnivetha\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.21.0\selenium-firefox-driver-4.21.0.jar;C:\Users\Arunnivetha\.m2\repository\org\seleniumhq\selenium\selenium-http\4.21.0\selenium-http-4.21.0.jar;C:\Users\Arunnivetha\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\Arunnivetha\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.21.0\selenium-ie-driver-4.21.0.jar;C:\Users\Arunnivetha\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.21.0\selenium-remote-driver-4.21.0.jar;C:\Users\Arunnivetha\.m2\repository\com\google\guava\guava\33.2.0-jre\guava-33.2.0-jre.jar;C:\Users\Arunnivetha\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\Arunnivetha\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Arunnivetha\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Arunnivetha\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\Arunnivetha\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\Arunnivetha\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.25.0-alpha\opentelemetry-semconv-1.25.0-alpha.jar;C:\Users\Arunnivetha\.m2\repository\io\opentelemetry\opentelemetry-api\1.38.0\opentelemetry-api-1.38.0.jar;C:\Users\Arunnivetha\.m2\repository\io\opentelemetry\opentelemetry-context\1.38.0\opentelemetry-context-1.38.0.jar;C:\Users\Arunnivetha\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.38.0\opentelemetry-exporter-logging-1.38.0.jar;C:\Users\Arunnivetha\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.38.0\opentelemetry-sdk-common-1.38.0.jar;C:\Users\Arunnivetha\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.38.0\opentelemetry-sdk-extension-autoconfigure-spi-1.38.0.jar;C:\Users\Arunnivetha\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.38.0\opentelemetry-sdk-extension-autoconfigure-1.38.0.jar;C:\Users\Arunnivetha\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.38.0-alpha\opentelemetry-api-incubator-1.38.0-alpha.jar;C:\Users\Arunnivetha\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.38.0\opentelemetry-sdk-trace-1.38.0.jar;C:\Users\Arunnivetha\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.38.0\opentelemetry-sdk-1.38.0.jar;C:\Users\Arunnivetha\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.38.0\opentelemetry-sdk-metrics-1.38.0.jar;C:\Users\Arunnivetha\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.38.0\opentelemetry-sdk-logs-1.38.0.jar;C:\Users\Arunnivetha\.m2\repository\net\bytebuddy\byte-buddy\1.14.15\byte-buddy-1.14.15.jar;C:\Users\Arunnivetha\.m2\repository\org\seleniumhq\selenium\selenium-os\4.21.0\selenium-os-4.21.0.jar;C:\Users\Arunnivetha\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\Arunnivetha\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.21.0\selenium-safari-driver-4.21.0.jar;C:\Users\Arunnivetha\.m2\repository\org\seleniumhq\selenium\selenium-support\4.21.0\selenium-support-4.21.0.jar;C:\Users\Arunnivetha\.m2\repository\io\github\bonigarcia\webdrivermanager\5.9.2\webdrivermanager-5.9.2.jar;C:\Users\Arunnivetha\.m2\repository\org\slf4j\slf4j-api\2.0.13\slf4j-api-2.0.13.jar;C:\Users\Arunnivetha\.m2\repository\com\google\code\gson\gson\2.11.0\gson-2.11.0.jar;C:\Users\Arunnivetha\.m2\repository\com\google\errorprone\error_prone_annotations\2.27.0\error_prone_annotations-2.27.0.jar;C:\Users\Arunnivetha\.m2\repository\com\github\docker-java\docker-java\3.4.0\docker-java-3.4.0.jar;C:\Users\Arunnivetha\.m2\repository\com\github\docker-java\docker-java-core\3.4.0\docker-java-core-3.4.0.jar;C:\Users\Arunnivetha\.m2\repository\com\github\docker-java\docker-java-api\3.4.0\docker-java-api-3.4.0.jar;C:\Users\Arunnivetha\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\Arunnivetha\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.4.0\docker-java-transport-httpclient5-3.4.0.jar;C:\Users\Arunnivetha\.m2\repository\com\github\docker-java\docker-java-transport\3.4.0\docker-java-transport-3.4.0.jar;C:\Users\Arunnivetha\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\Arunnivetha\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\Arunnivetha\.m2\repository\org\apache\commons\commons-lang3\3.15.0\commons-lang3-3.15.0.jar;C:\Users\Arunnivetha\.m2\repository\org\apache\commons\commons-compress\1.26.2\commons-compress-1.26.2.jar;C:\Users\Arunnivetha\.m2\repository\commons-codec\commons-codec\1.17.0\commons-codec-1.17.0.jar;C:\Users\Arunnivetha\.m2\repository\commons-io\commons-io\2.16.1\commons-io-2.16.1.jar;C:\Users\Arunnivetha\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\Arunnivetha\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\Arunnivetha\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\Arunnivetha\.m2\repository\org\testng\testng\7.10.2\testng-7.10.2.jar;C:\Users\Arunnivetha\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\Arunnivetha\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\Arunnivetha\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.17.2\jackson-databind-2.17.2.jar;C:\Users\Arunnivetha\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.17.2\jackson-annotations-2.17.2.jar;C:\Users\Arunnivetha\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.17.2\jackson-core-2.17.2.jar;C:\Users\Arunnivetha\.m2\repository\com\aventstack\extentreports\5.1.2\extentreports-5.1.2.jar;C:\Users\Arunnivetha\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\Users\Arunnivetha\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\Arunnivetha\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\Arunnivetha\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Arunnivetha\AppData\Local\Temp\surefire4169576424754185029\surefirebooter-20261030220835986_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Arunnivetha\AppData\Local\Temp\surefire14119691620735948921\surefirebooter-20261030221820335_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="26.0.2.1+1-7"/>
@@ -61,7 +61,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="70.0"/>
   </properties>
-  <testcase name="testAnnualContributionCalculator[[TC01_WeeklyPayment] Standard calculation with Weekly payment frequency (Multiplier: 52) (Input: &apos;10.00&apos;, Freq: &apos;weekly&apos;)](1)" classname="tests.CalculatorTest" time="0.747">
+  <testcase name="testAnnualContributionCalculator[[TC01_WeeklyPayment] Standard calculation with Weekly payment frequency (Multiplier: 52) (Input: &apos;10.00&apos;, Freq: &apos;weekly&apos;)](1)" classname="tests.CalculatorTest" time="0.629">
     <system-out><![CDATA[================================================================================
 RUNNING TEST: [TC01_WeeklyPayment] - Standard calculation with Weekly payment frequency (Multiplier: 52)
   INPUTS -> Amount: '10.00' | Frequency: 'weekly'
@@ -74,13 +74,13 @@ RUNNING TEST: [TC01_WeeklyPayment] - Standard calculation with Weekly payment fr
     <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
 SLF4J(W): Defaulting to no-operation (NOP) logger implementation
 SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
-Oct 30, 2026 10:08:40 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Oct 30, 2026 10:18:24 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 155
-Oct 30, 2026 10:08:40 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Oct 30, 2026 10:18:24 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 155.0.8059.85. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="testAnnualContributionCalculator[[TC02_FortnightlyPayment] Standard calculation with Fortnightly payment frequency (Multiplier: 26) (Input: &apos;50.00&apos;, Freq: &apos;fortnightly&apos;)](2)" classname="tests.CalculatorTest" time="0.588">
+  <testcase name="testAnnualContributionCalculator[[TC02_FortnightlyPayment] Standard calculation with Fortnightly payment frequency (Multiplier: 26) (Input: &apos;50.00&apos;, Freq: &apos;fortnightly&apos;)](2)" classname="tests.CalculatorTest" time="0.682">
     <failure message="[TC02_FortnightlyPayment] Calculation mismatch for amount=&apos;50.00&apos;, freq=&apos;fortnightly&apos;. Rule Ref: R1: 50.00 * 26 = 1,300.00 (Note: Application defect uses 24) expected [Annual contribution: €1,300.00] but found [Annual contribution: €1,200.00]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: [TC02_FortnightlyPayment] Calculation mismatch for amount='50.00', freq='fortnightly'. Rule Ref: R1: 50.00 * 26 = 1,300.00 (Note: Application defect uses 24) expected [Annual contribution: €1,300.00] but found [Annual contribution: €1,200.00]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
@@ -128,7 +128,7 @@ RUNNING TEST: [TC02_FortnightlyPayment] - Standard calculation with Fortnightly 
     <system-err><![CDATA[  STATUS          : FAILED ❌ -> [TC02_FortnightlyPayment] Calculation mismatch for amount='50.00', freq='fortnightly'. Rule Ref: R1: 50.00 * 26 = 1,300.00 (Note: Application defect uses 24) expected [Annual contribution: €1,300.00] but found [Annual contribution: €1,200.00]
 ]]></system-err>
   </testcase>
-  <testcase name="testAnnualContributionCalculator[[TC03_MonthlyPayment] Standard calculation with Monthly payment frequency (Multiplier: 12) (Input: &apos;100.00&apos;, Freq: &apos;monthly&apos;)](3)" classname="tests.CalculatorTest" time="0.553">
+  <testcase name="testAnnualContributionCalculator[[TC03_MonthlyPayment] Standard calculation with Monthly payment frequency (Multiplier: 12) (Input: &apos;100.00&apos;, Freq: &apos;monthly&apos;)](3)" classname="tests.CalculatorTest" time="0.645">
     <system-out><![CDATA[================================================================================
 RUNNING TEST: [TC03_MonthlyPayment] - Standard calculation with Monthly payment frequency (Multiplier: 12)
   INPUTS -> Amount: '100.00' | Frequency: 'monthly'
@@ -139,7 +139,7 @@ RUNNING TEST: [TC03_MonthlyPayment] - Standard calculation with Monthly payment 
 
 ]]></system-out>
   </testcase>
-  <testcase name="testAnnualContributionCalculator[[TC04_AnnualPayment] Standard calculation with Annual payment frequency (Multiplier: 1) (Input: &apos;1200.00&apos;, Freq: &apos;annual&apos;)](4)" classname="tests.CalculatorTest" time="0.566">
+  <testcase name="testAnnualContributionCalculator[[TC04_AnnualPayment] Standard calculation with Annual payment frequency (Multiplier: 1) (Input: &apos;1200.00&apos;, Freq: &apos;annual&apos;)](4)" classname="tests.CalculatorTest" time="0.663">
     <system-out><![CDATA[================================================================================
 RUNNING TEST: [TC04_AnnualPayment] - Standard calculation with Annual payment frequency (Multiplier: 1)
   INPUTS -> Amount: '1200.00' | Frequency: 'annual'
@@ -150,7 +150,7 @@ RUNNING TEST: [TC04_AnnualPayment] - Standard calculation with Annual payment fr
 
 ]]></system-out>
   </testcase>
-  <testcase name="testAnnualContributionCalculator[[TC05_LowercaseFrequency] Payment frequency supplied in all lowercase letters (Input: &apos;25.00&apos;, Freq: &apos;weekly&apos;)](5)" classname="tests.CalculatorTest" time="0.449">
+  <testcase name="testAnnualContributionCalculator[[TC05_LowercaseFrequency] Payment frequency supplied in all lowercase letters (Input: &apos;25.00&apos;, Freq: &apos;weekly&apos;)](5)" classname="tests.CalculatorTest" time="0.518">
     <system-out><![CDATA[================================================================================
 RUNNING TEST: [TC05_LowercaseFrequency] - Payment frequency supplied in all lowercase letters
   INPUTS -> Amount: '25.00' | Frequency: 'weekly'
@@ -161,9 +161,9 @@ RUNNING TEST: [TC05_LowercaseFrequency] - Payment frequency supplied in all lowe
 
 ]]></system-out>
   </testcase>
-  <testcase name="testAnnualContributionCalculator[[TC06_UppercaseFrequency] Payment frequency supplied in UPPERCASE letters to the test harness. NOTE: this does NOT genuinely exercise R2 case-insensitivity in the application. The calculator&apos;s &lt;select&gt; only ever submits a fixed lowercase value attribute regardless of which option&apos;s visible text is matched, so the real app never receives an uppercase frequency string here. This case only proves the Selenium POM can select the right dropdown option when given mixed-case test input. True R2 coverage for this app comes only from the Members table (see MembersValidationTest, member M004) where raw mixed-case strings reach the app&apos;s lookup logic directly, and from ApplicationCoreLogicTest which calls the app&apos;s own annualFor() function directly via JavaScript to bypass this UI constraint. (Input: &apos;200.00&apos;, Freq: &apos;MONTHLY&apos;)](6)" classname="tests.CalculatorTest" time="0.611">
+  <testcase name="testAnnualContributionCalculator[[TC06_UppercaseFrequency] Uppercase frequency via dropdown (UI limitation — not a real R2 test) (Input: &apos;200.00&apos;, Freq: &apos;MONTHLY&apos;)](6)" classname="tests.CalculatorTest" time="0.508">
     <system-out><![CDATA[================================================================================
-RUNNING TEST: [TC06_UppercaseFrequency] - Payment frequency supplied in UPPERCASE letters to the test harness. NOTE: this does NOT genuinely exercise R2 case-insensitivity in the application. The calculator's <select> only ever submits a fixed lowercase value attribute regardless of which option's visible text is matched, so the real app never receives an uppercase frequency string here. This case only proves the Selenium POM can select the right dropdown option when given mixed-case test input. True R2 coverage for this app comes only from the Members table (see MembersValidationTest, member M004) where raw mixed-case strings reach the app's lookup logic directly, and from ApplicationCoreLogicTest which calls the app's own annualFor() function directly via JavaScript to bypass this UI constraint.
+RUNNING TEST: [TC06_UppercaseFrequency] - Uppercase frequency via dropdown (UI limitation — not a real R2 test)
   INPUTS -> Amount: '200.00' | Frequency: 'MONTHLY'
   EXPECTED RESULT : Annual contribution: €2,400.00
   ACTUAL RESULT   : Annual contribution: €2,400.00
@@ -172,7 +172,7 @@ RUNNING TEST: [TC06_UppercaseFrequency] - Payment frequency supplied in UPPERCAS
 
 ]]></system-out>
   </testcase>
-  <testcase name="testAnnualContributionCalculator[[TC07_ZeroAmount] Boundary value testing with Zero contribution amount (Input: &apos;0&apos;, Freq: &apos;weekly&apos;)](7)" classname="tests.CalculatorTest" time="0.28">
+  <testcase name="testAnnualContributionCalculator[[TC07_ZeroAmount] Boundary value testing with Zero contribution amount (Input: &apos;0&apos;, Freq: &apos;weekly&apos;)](7)" classname="tests.CalculatorTest" time="0.398">
     <system-out><![CDATA[================================================================================
 RUNNING TEST: [TC07_ZeroAmount] - Boundary value testing with Zero contribution amount
   INPUTS -> Amount: '0' | Frequency: 'weekly'
@@ -183,7 +183,7 @@ RUNNING TEST: [TC07_ZeroAmount] - Boundary value testing with Zero contribution 
 
 ]]></system-out>
   </testcase>
-  <testcase name="testAnnualContributionCalculator[[TC08_DecimalAmount] Calculation with fractional decimal contribution amount (Input: &apos;75.50&apos;, Freq: &apos;monthly&apos;)](8)" classname="tests.CalculatorTest" time="0.354">
+  <testcase name="testAnnualContributionCalculator[[TC08_DecimalAmount] Calculation with fractional decimal contribution amount (Input: &apos;75.50&apos;, Freq: &apos;monthly&apos;)](8)" classname="tests.CalculatorTest" time="0.476">
     <system-out><![CDATA[================================================================================
 RUNNING TEST: [TC08_DecimalAmount] - Calculation with fractional decimal contribution amount
   INPUTS -> Amount: '75.50' | Frequency: 'monthly'
@@ -194,7 +194,7 @@ RUNNING TEST: [TC08_DecimalAmount] - Calculation with fractional decimal contrib
 
 ]]></system-out>
   </testcase>
-  <testcase name="testAnnualContributionCalculator[[TC09_LargeAmount] Boundary testing with large monetary contribution amount verifying comma formatting (Input: &apos;10000.00&apos;, Freq: &apos;monthly&apos;)](9)" classname="tests.CalculatorTest" time="0.475">
+  <testcase name="testAnnualContributionCalculator[[TC09_LargeAmount] Boundary testing with large monetary contribution amount verifying comma formatting (Input: &apos;10000.00&apos;, Freq: &apos;monthly&apos;)](9)" classname="tests.CalculatorTest" time="0.52">
     <system-out><![CDATA[================================================================================
 RUNNING TEST: [TC09_LargeAmount] - Boundary testing with large monetary contribution amount verifying comma formatting
   INPUTS -> Amount: '10000.00' | Frequency: 'monthly'
@@ -205,7 +205,7 @@ RUNNING TEST: [TC09_LargeAmount] - Boundary testing with large monetary contribu
 
 ]]></system-out>
   </testcase>
-  <testcase name="testAnnualContributionCalculator[[TC10_BlankAmount] Validation test for blank / empty contribution amount input (Input: &apos;&apos;, Freq: &apos;monthly&apos;)](10)" classname="tests.CalculatorTest" time="0.357">
+  <testcase name="testAnnualContributionCalculator[[TC10_BlankAmount] Validation test for blank / empty contribution amount input (Input: &apos;&apos;, Freq: &apos;monthly&apos;)](10)" classname="tests.CalculatorTest" time="0.431">
     <system-out><![CDATA[================================================================================
 RUNNING TEST: [TC10_BlankAmount] - Validation test for blank / empty contribution amount input
   INPUTS -> Amount: '' | Frequency: 'monthly'
@@ -216,7 +216,7 @@ RUNNING TEST: [TC10_BlankAmount] - Validation test for blank / empty contributio
 
 ]]></system-out>
   </testcase>
-  <testcase name="testAnnualContributionCalculator[[TC11_AlphabeticInput] Validation test for non-numeric alphabetic input string (Input: &apos;abc&apos;, Freq: &apos;weekly&apos;)](11)" classname="tests.CalculatorTest" time="0.327">
+  <testcase name="testAnnualContributionCalculator[[TC11_AlphabeticInput] Validation test for non-numeric alphabetic input string (Input: &apos;abc&apos;, Freq: &apos;weekly&apos;)](11)" classname="tests.CalculatorTest" time="0.403">
     <system-out><![CDATA[================================================================================
 RUNNING TEST: [TC11_AlphabeticInput] - Validation test for non-numeric alphabetic input string
   INPUTS -> Amount: 'abc' | Frequency: 'weekly'
@@ -227,8 +227,8 @@ RUNNING TEST: [TC11_AlphabeticInput] - Validation test for non-numeric alphabeti
 
 ]]></system-out>
   </testcase>
-  <testcase name="testAnnualContributionCalculator[[TC12_NegativeAmount] Validation test for negative contribution amount (Input: &apos;-50.00&apos;, Freq: &apos;monthly&apos;)](12)" classname="tests.CalculatorTest" time="0.362">
-    <failure message="[TC12_NegativeAmount] Validation error mismatch for amount=&apos;-50.00&apos;. Rule Ref: R8: Negative amount must show &apos;Amount cannot be negative&apos; (Note: App defect fails to validate) expected [Amount cannot be negative] but found []" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: [TC12_NegativeAmount] Validation error mismatch for amount='-50.00'. Rule Ref: R8: Negative amount must show 'Amount cannot be negative' (Note: App defect fails to validate) expected [Amount cannot be negative] but found []
+  <testcase name="testAnnualContributionCalculator[[TC12_NegativeAmount] Validation test for negative contribution amount (Input: &apos;-50.00&apos;, Freq: &apos;monthly&apos;)](12)" classname="tests.CalculatorTest" time="0.468">
+    <failure message="[TC12_NegativeAmount] Validation error mismatch for amount=&apos;-50.00&apos;. Rule Ref: R8 (app defect: does not validate — see BUG-003) expected [Amount cannot be negative] but found []" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: [TC12_NegativeAmount] Validation error mismatch for amount='-50.00'. Rule Ref: R8 (app defect: does not validate — see BUG-003) expected [Amount cannot be negative] but found []
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -272,10 +272,10 @@ RUNNING TEST: [TC12_NegativeAmount] - Validation test for negative contribution 
   EXPECTED ERROR  : Amount cannot be negative
   ACTUAL ERROR    : 
 ]]></system-out>
-    <system-err><![CDATA[  STATUS          : FAILED ❌ -> [TC12_NegativeAmount] Validation error mismatch for amount='-50.00'. Rule Ref: R8: Negative amount must show 'Amount cannot be negative' (Note: App defect fails to validate) expected [Amount cannot be negative] but found []
+    <system-err><![CDATA[  STATUS          : FAILED ❌ -> [TC12_NegativeAmount] Validation error mismatch for amount='-50.00'. Rule Ref: R8 (app defect: does not validate — see BUG-003) expected [Amount cannot be negative] but found []
 ]]></system-err>
   </testcase>
-  <testcase name="testAnnualContributionCalculator[[TC13_WhitespaceAmount] Validation test for whitespace only amount (Input: &apos;   &apos;, Freq: &apos;annual&apos;)](13)" classname="tests.CalculatorTest" time="0.363">
+  <testcase name="testAnnualContributionCalculator[[TC13_WhitespaceAmount] Validation test for whitespace only amount (Input: &apos;   &apos;, Freq: &apos;annual&apos;)](13)" classname="tests.CalculatorTest" time="0.581">
     <system-out><![CDATA[================================================================================
 RUNNING TEST: [TC13_WhitespaceAmount] - Validation test for whitespace only amount
   INPUTS -> Amount: '   ' | Frequency: 'annual'
@@ -286,7 +286,7 @@ RUNNING TEST: [TC13_WhitespaceAmount] - Validation test for whitespace only amou
 
 ]]></system-out>
   </testcase>
-  <testcase name="testAnnualContributionCalculator[[TC14_NegativeDecimalAmount] Validation test for negative fractional decimal amount (Input: &apos;-10.50&apos;, Freq: &apos;weekly&apos;)](14)" classname="tests.CalculatorTest" time="0.265">
+  <testcase name="testAnnualContributionCalculator[[TC14_NegativeDecimalAmount] Validation test for negative fractional decimal amount (Input: &apos;-10.50&apos;, Freq: &apos;weekly&apos;)](14)" classname="tests.CalculatorTest" time="0.466">
     <failure message="[TC14_NegativeDecimalAmount] Validation error mismatch for amount=&apos;-10.50&apos;. Rule Ref: R8: Negative decimal must show &apos;Amount cannot be negative&apos; expected [Amount cannot be negative] but found []" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: [TC14_NegativeDecimalAmount] Validation error mismatch for amount='-10.50'. Rule Ref: R8: Negative decimal must show 'Amount cannot be negative' expected [Amount cannot be negative] but found []
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
@@ -334,7 +334,7 @@ RUNNING TEST: [TC14_NegativeDecimalAmount] - Validation test for negative fracti
     <system-err><![CDATA[  STATUS          : FAILED ❌ -> [TC14_NegativeDecimalAmount] Validation error mismatch for amount='-10.50'. Rule Ref: R8: Negative decimal must show 'Amount cannot be negative' expected [Amount cannot be negative] but found []
 ]]></system-err>
   </testcase>
-  <testcase name="testAnnualContributionCalculator[[TC15_TrailingDecimalPoint] Amount with a trailing decimal point and no fractional digits (Input: &apos;5.&apos;, Freq: &apos;weekly&apos;)](15)" classname="tests.CalculatorTest" time="0.351">
+  <testcase name="testAnnualContributionCalculator[[TC15_TrailingDecimalPoint] Amount with a trailing decimal point and no fractional digits (Input: &apos;5.&apos;, Freq: &apos;weekly&apos;)](15)" classname="tests.CalculatorTest" time="0.594">
     <system-out><![CDATA[================================================================================
 RUNNING TEST: [TC15_TrailingDecimalPoint] - Amount with a trailing decimal point and no fractional digits
   INPUTS -> Amount: '5.' | Frequency: 'weekly'
@@ -345,7 +345,7 @@ RUNNING TEST: [TC15_TrailingDecimalPoint] - Amount with a trailing decimal point
 
 ]]></system-out>
   </testcase>
-  <testcase name="testAnnualContributionCalculator[[TC16_LeadingPlusSign] Amount with an explicit leading plus sign (Input: &apos;+25&apos;, Freq: &apos;monthly&apos;)](16)" classname="tests.CalculatorTest" time="0.306">
+  <testcase name="testAnnualContributionCalculator[[TC16_LeadingPlusSign] Amount with an explicit leading plus sign (Input: &apos;+25&apos;, Freq: &apos;monthly&apos;)](16)" classname="tests.CalculatorTest" time="0.502">
     <system-out><![CDATA[================================================================================
 RUNNING TEST: [TC16_LeadingPlusSign] - Amount with an explicit leading plus sign
   INPUTS -> Amount: '+25' | Frequency: 'monthly'
@@ -356,7 +356,7 @@ RUNNING TEST: [TC16_LeadingPlusSign] - Amount with an explicit leading plus sign
 
 ]]></system-out>
   </testcase>
-  <testcase name="testAnnualContributionCalculator[[TC17_ScientificNotation] Amount expressed in scientific notation (Input: &apos;1e3&apos;, Freq: &apos;monthly&apos;)](17)" classname="tests.CalculatorTest" time="0.38">
+  <testcase name="testAnnualContributionCalculator[[TC17_ScientificNotation] Amount expressed in scientific notation (Input: &apos;1e3&apos;, Freq: &apos;monthly&apos;)](17)" classname="tests.CalculatorTest" time="0.602">
     <system-out><![CDATA[================================================================================
 RUNNING TEST: [TC17_ScientificNotation] - Amount expressed in scientific notation
   INPUTS -> Amount: '1e3' | Frequency: 'monthly'
@@ -367,7 +367,7 @@ RUNNING TEST: [TC17_ScientificNotation] - Amount expressed in scientific notatio
 
 ]]></system-out>
   </testcase>
-  <testcase name="testAnnualContributionCalculator[[TC18_LeadingZeros] Amount with leading zeros (Input: &apos;007&apos;, Freq: &apos;annual&apos;)](18)" classname="tests.CalculatorTest" time="0.359">
+  <testcase name="testAnnualContributionCalculator[[TC18_LeadingZeros] Amount with leading zeros (Input: &apos;007&apos;, Freq: &apos;annual&apos;)](18)" classname="tests.CalculatorTest" time="0.689">
     <system-out><![CDATA[================================================================================
 RUNNING TEST: [TC18_LeadingZeros] - Amount with leading zeros
   INPUTS -> Amount: '007' | Frequency: 'annual'
@@ -378,7 +378,7 @@ RUNNING TEST: [TC18_LeadingZeros] - Amount with leading zeros
 
 ]]></system-out>
   </testcase>
-  <testcase name="testAnnualContributionCalculator[[TC19_CommaFormattedAmountRejected] Amount using thousands-separator comma formatting, which is not a valid numeric literal (Input: &apos;5,000&apos;, Freq: &apos;monthly&apos;)](19)" classname="tests.CalculatorTest" time="0.35">
+  <testcase name="testAnnualContributionCalculator[[TC19_CommaFormattedAmountRejected] Amount using thousands-separator comma formatting, which is not a valid numeric literal (Input: &apos;5,000&apos;, Freq: &apos;monthly&apos;)](19)" classname="tests.CalculatorTest" time="0.558">
     <system-out><![CDATA[================================================================================
 RUNNING TEST: [TC19_CommaFormattedAmountRejected] - Amount using thousands-separator comma formatting, which is not a valid numeric literal
   INPUTS -> Amount: '5,000' | Frequency: 'monthly'
@@ -389,7 +389,7 @@ RUNNING TEST: [TC19_CommaFormattedAmountRejected] - Amount using thousands-separ
 
 ]]></system-out>
   </testcase>
-  <testcase name="testAnnualContributionCalculator[[TC20_MultipleDecimalPointsRejected] Amount with two decimal points, which is not a valid numeric literal (Input: &apos;5..5&apos;, Freq: &apos;weekly&apos;)](20)" classname="tests.CalculatorTest" time="0.426">
+  <testcase name="testAnnualContributionCalculator[[TC20_MultipleDecimalPointsRejected] Amount with two decimal points, which is not a valid numeric literal (Input: &apos;5..5&apos;, Freq: &apos;weekly&apos;)](20)" classname="tests.CalculatorTest" time="0.387">
     <system-out><![CDATA[================================================================================
 RUNNING TEST: [TC20_MultipleDecimalPointsRejected] - Amount with two decimal points, which is not a valid numeric literal
   INPUTS -> Amount: '5..5' | Frequency: 'weekly'
@@ -400,8 +400,8 @@ RUNNING TEST: [TC20_MultipleDecimalPointsRejected] - Amount with two decimal poi
 
 ]]></system-out>
   </testcase>
-  <testcase name="testAnnualContributionCalculator[[TC21_HexNotationAmount_AmbiguousEdgeCase] Amount expressed as a hexadecimal literal. JS Number(&apos;0x10&apos;) parses this to 16 (not NaN), so the app&apos;s isNaN-based check does not reject it, while Java&apos;s BigDecimal does not support hex notation and throws. This test documents a genuine app-vs-spec mismatch (see BUG_REPORTS.md Finding F1) rather than asserting a fabricated requirement. (Input: &apos;0x10&apos;, Freq: &apos;weekly&apos;)](21)" classname="tests.CalculatorTest" time="0.479">
-    <failure message="[TC21_HexNotationAmount_AmbiguousEdgeCase] Validation error mismatch for amount=&apos;0x10&apos;. Rule Ref: R8 (ambiguous): a hex literal is not a normal monetary numeric input; see BUG_REPORTS.md Finding F1 for the full analysis of this expected FAIL. expected [Enter a valid amount] but found []" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: [TC21_HexNotationAmount_AmbiguousEdgeCase] Validation error mismatch for amount='0x10'. Rule Ref: R8 (ambiguous): a hex literal is not a normal monetary numeric input; see BUG_REPORTS.md Finding F1 for the full analysis of this expected FAIL. expected [Enter a valid amount] but found []
+  <testcase name="testAnnualContributionCalculator[[TC21_HexNotationAmount_AmbiguousEdgeCase] Hexadecimal amount input (ambiguous edge case) (Input: &apos;0x10&apos;, Freq: &apos;weekly&apos;)](21)" classname="tests.CalculatorTest" time="0.515">
+    <failure message="[TC21_HexNotationAmount_AmbiguousEdgeCase] Validation error mismatch for amount=&apos;0x10&apos;. Rule Ref: R8 (ambiguous) — see BUG_REPORTS.md Finding F1 expected [Enter a valid amount] but found []" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: [TC21_HexNotationAmount_AmbiguousEdgeCase] Validation error mismatch for amount='0x10'. Rule Ref: R8 (ambiguous) — see BUG_REPORTS.md Finding F1 expected [Enter a valid amount] but found []
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -440,16 +440,16 @@ RUNNING TEST: [TC20_MultipleDecimalPointsRejected] - Amount with two decimal poi
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
     <system-out><![CDATA[================================================================================
-RUNNING TEST: [TC21_HexNotationAmount_AmbiguousEdgeCase] - Amount expressed as a hexadecimal literal. JS Number('0x10') parses this to 16 (not NaN), so the app's isNaN-based check does not reject it, while Java's BigDecimal does not support hex notation and throws. This test documents a genuine app-vs-spec mismatch (see BUG_REPORTS.md Finding F1) rather than asserting a fabricated requirement.
+RUNNING TEST: [TC21_HexNotationAmount_AmbiguousEdgeCase] - Hexadecimal amount input (ambiguous edge case)
   INPUTS -> Amount: '0x10' | Frequency: 'weekly'
   EXPECTED ERROR  : Enter a valid amount
   ACTUAL ERROR    : 
 ]]></system-out>
-    <system-err><![CDATA[  STATUS          : FAILED ❌ -> [TC21_HexNotationAmount_AmbiguousEdgeCase] Validation error mismatch for amount='0x10'. Rule Ref: R8 (ambiguous): a hex literal is not a normal monetary numeric input; see BUG_REPORTS.md Finding F1 for the full analysis of this expected FAIL. expected [Enter a valid amount] but found []
+    <system-err><![CDATA[  STATUS          : FAILED ❌ -> [TC21_HexNotationAmount_AmbiguousEdgeCase] Validation error mismatch for amount='0x10'. Rule Ref: R8 (ambiguous) — see BUG_REPORTS.md Finding F1 expected [Enter a valid amount] but found []
 ]]></system-err>
   </testcase>
-  <testcase name="testAnnualContributionCalculator[[TC22_InfinityAmount_AmbiguousEdgeCase] Amount literally &apos;Infinity&apos;. JS Number(&apos;Infinity&apos;) is a valid, non-NaN number, so the app&apos;s isNaN-based check accepts it and renders &apos;Annual contribution: €∞&apos; instead of an error. This test documents a genuine app-vs-spec mismatch (see BUG_REPORTS.md Finding F2) rather than asserting a fabricated requirement. (Input: &apos;Infinity&apos;, Freq: &apos;weekly&apos;)](22)" classname="tests.CalculatorTest" time="0.284">
-    <failure message="[TC22_InfinityAmount_AmbiguousEdgeCase] Validation error mismatch for amount=&apos;Infinity&apos;. Rule Ref: R8 (ambiguous): see BUG_REPORTS.md Finding F2 for the full analysis of this expected FAIL. expected [Enter a valid amount] but found []" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: [TC22_InfinityAmount_AmbiguousEdgeCase] Validation error mismatch for amount='Infinity'. Rule Ref: R8 (ambiguous): see BUG_REPORTS.md Finding F2 for the full analysis of this expected FAIL. expected [Enter a valid amount] but found []
+  <testcase name="testAnnualContributionCalculator[[TC22_InfinityAmount_AmbiguousEdgeCase] Literal &apos;Infinity&apos; as amount (ambiguous edge case) (Input: &apos;Infinity&apos;, Freq: &apos;weekly&apos;)](22)" classname="tests.CalculatorTest" time="0.541">
+    <failure message="[TC22_InfinityAmount_AmbiguousEdgeCase] Validation error mismatch for amount=&apos;Infinity&apos;. Rule Ref: R8 (ambiguous) — see BUG_REPORTS.md Finding F2 expected [Enter a valid amount] but found []" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: [TC22_InfinityAmount_AmbiguousEdgeCase] Validation error mismatch for amount='Infinity'. Rule Ref: R8 (ambiguous) — see BUG_REPORTS.md Finding F2 expected [Enter a valid amount] but found []
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -488,15 +488,15 @@ RUNNING TEST: [TC21_HexNotationAmount_AmbiguousEdgeCase] - Amount expressed as a
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
     <system-out><![CDATA[================================================================================
-RUNNING TEST: [TC22_InfinityAmount_AmbiguousEdgeCase] - Amount literally 'Infinity'. JS Number('Infinity') is a valid, non-NaN number, so the app's isNaN-based check accepts it and renders 'Annual contribution: €∞' instead of an error. This test documents a genuine app-vs-spec mismatch (see BUG_REPORTS.md Finding F2) rather than asserting a fabricated requirement.
+RUNNING TEST: [TC22_InfinityAmount_AmbiguousEdgeCase] - Literal 'Infinity' as amount (ambiguous edge case)
   INPUTS -> Amount: 'Infinity' | Frequency: 'weekly'
   EXPECTED ERROR  : Enter a valid amount
   ACTUAL ERROR    : 
 ]]></system-out>
-    <system-err><![CDATA[  STATUS          : FAILED ❌ -> [TC22_InfinityAmount_AmbiguousEdgeCase] Validation error mismatch for amount='Infinity'. Rule Ref: R8 (ambiguous): see BUG_REPORTS.md Finding F2 for the full analysis of this expected FAIL. expected [Enter a valid amount] but found []
+    <system-err><![CDATA[  STATUS          : FAILED ❌ -> [TC22_InfinityAmount_AmbiguousEdgeCase] Validation error mismatch for amount='Infinity'. Rule Ref: R8 (ambiguous) — see BUG_REPORTS.md Finding F2 expected [Enter a valid amount] but found []
 ]]></system-err>
   </testcase>
-  <testcase name="testMemberRowCalculations[Member{memberId=&apos;M001&apos;, name=&apos;Aoife Byrne&apos;, frequency=&apos;weekly&apos;, contributionAmount=10, unitsHeld=152.4381925, unitPrice=3.4567, nextOrderUnits=1.2345678}](1)" classname="tests.MembersValidationTest" time="0.38">
+  <testcase name="testMemberRowCalculations[Member{memberId=&apos;M001&apos;, name=&apos;Aoife Byrne&apos;, frequency=&apos;weekly&apos;, contributionAmount=10, unitsHeld=152.4381925, unitPrice=3.4567, nextOrderUnits=1.2345678}](1)" classname="tests.MembersValidationTest" time="0.784">
     <system-out><![CDATA[================================================================================
 STARTING VALIDATION FOR MEMBER: M001 (Aoife Byrne)
 ================================================================================
@@ -580,13 +580,13 @@ Business Rule: R7
 ================================================================================
 
 ]]></system-out>
-    <system-err><![CDATA[Oct 30, 2026 10:08:53 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Oct 30, 2026 10:18:40 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 155
-Oct 30, 2026 10:08:53 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Oct 30, 2026 10:18:40 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 155.0.8059.85. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="testMemberRowCalculations[Member{memberId=&apos;M002&apos;, name=&apos;Liam Walsh&apos;, frequency=&apos;fortnightly&apos;, contributionAmount=50, unitsHeld=980.1234567, unitPrice=2.1189, nextOrderUnits=4.5}](2)" classname="tests.MembersValidationTest" time="0.581">
+  <testcase name="testMemberRowCalculations[Member{memberId=&apos;M002&apos;, name=&apos;Liam Walsh&apos;, frequency=&apos;fortnightly&apos;, contributionAmount=50, unitsHeld=980.1234567, unitPrice=2.1189, nextOrderUnits=4.5}](2)" classname="tests.MembersValidationTest" time="0.496">
     <failure message="The following asserts failed:&#10;	&#10;Member ID: M002&#10;Field: Annual Contribution&#10;Expected: €1,300.00&#10;Actual: €1,200.00&#10;Status: FAILED&#10;Business Rule: R1 / R2&#10; expected [€1,300.00] but found [€1,200.00]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
 The following asserts failed:
 	
@@ -715,7 +715,7 @@ Business Rule: R7
 
 ]]></system-out>
   </testcase>
-  <testcase name="testMemberRowCalculations[Member{memberId=&apos;M003&apos;, name=&apos;Siobhan Kelly&apos;, frequency=&apos;monthly&apos;, contributionAmount=200, unitsHeld=2450.75, unitPrice=1.9874, nextOrderUnits=12.0004}](3)" classname="tests.MembersValidationTest" time="0.477">
+  <testcase name="testMemberRowCalculations[Member{memberId=&apos;M003&apos;, name=&apos;Siobhan Kelly&apos;, frequency=&apos;monthly&apos;, contributionAmount=200, unitsHeld=2450.75, unitPrice=1.9874, nextOrderUnits=12.0004}](3)" classname="tests.MembersValidationTest" time="0.383">
     <system-out><![CDATA[================================================================================
 STARTING VALIDATION FOR MEMBER: M003 (Siobhan Kelly)
 ================================================================================
@@ -800,7 +800,7 @@ Business Rule: R7
 
 ]]></system-out>
   </testcase>
-  <testcase name="testMemberRowCalculations[Member{memberId=&apos;M004&apos;, name=&apos;Conor Doyle&apos;, frequency=&apos;Monthly&apos;, contributionAmount=150, unitsHeld=610.0000001, unitPrice=4.0021, nextOrderUnits=3.25}](4)" classname="tests.MembersValidationTest" time="0.455">
+  <testcase name="testMemberRowCalculations[Member{memberId=&apos;M004&apos;, name=&apos;Conor Doyle&apos;, frequency=&apos;Monthly&apos;, contributionAmount=150, unitsHeld=610.0000001, unitPrice=4.0021, nextOrderUnits=3.25}](4)" classname="tests.MembersValidationTest" time="0.536">
     <failure message="The following asserts failed:&#10;	&#10;Member ID: M004&#10;Field: Annual Contribution&#10;Expected: €1,800.00&#10;Actual: €7,800.00&#10;Status: FAILED&#10;Business Rule: R1 / R2&#10; expected [€1,800.00] but found [€7,800.00]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
 The following asserts failed:
 	
@@ -929,7 +929,7 @@ Business Rule: R7
 
 ]]></system-out>
   </testcase>
-  <testcase name="testMemberRowCalculations[Member{memberId=&apos;M005&apos;, name=&apos;Niamh Ryan&apos;, frequency=&apos;annual&apos;, contributionAmount=1200, unitsHeld=75.9876543, unitPrice=15.2, nextOrderUnits=0.75}](5)" classname="tests.MembersValidationTest" time="0.265">
+  <testcase name="testMemberRowCalculations[Member{memberId=&apos;M005&apos;, name=&apos;Niamh Ryan&apos;, frequency=&apos;annual&apos;, contributionAmount=1200, unitsHeld=75.9876543, unitPrice=15.2, nextOrderUnits=0.75}](5)" classname="tests.MembersValidationTest" time="0.388">
     <system-out><![CDATA[================================================================================
 STARTING VALIDATION FOR MEMBER: M005 (Niamh Ryan)
 ================================================================================
@@ -1014,7 +1014,7 @@ Business Rule: R7
 
 ]]></system-out>
   </testcase>
-  <testcase name="testMemberRowCalculations[Member{memberId=&apos;M006&apos;, name=&apos;Sean Murphy&apos;, frequency=&apos;weekly&apos;, contributionAmount=0, unitsHeld=0, unitPrice=3.4567, nextOrderUnits=0}](6)" classname="tests.MembersValidationTest" time="0.276">
+  <testcase name="testMemberRowCalculations[Member{memberId=&apos;M006&apos;, name=&apos;Sean Murphy&apos;, frequency=&apos;weekly&apos;, contributionAmount=0, unitsHeld=0, unitPrice=3.4567, nextOrderUnits=0}](6)" classname="tests.MembersValidationTest" time="0.488">
     <system-out><![CDATA[================================================================================
 STARTING VALIDATION FOR MEMBER: M006 (Sean Murphy)
 ================================================================================
@@ -1099,7 +1099,7 @@ Business Rule: R7
 
 ]]></system-out>
   </testcase>
-  <testcase name="testMemberRowCalculations[Member{memberId=&apos;M007&apos;, name=&apos;Ciara Nolan&apos;, frequency=&apos;monthly&apos;, contributionAmount=75.5, unitsHeld=333.3333333, unitPrice=2.75, nextOrderUnits=0.00004}](7)" classname="tests.MembersValidationTest" time="0.284">
+  <testcase name="testMemberRowCalculations[Member{memberId=&apos;M007&apos;, name=&apos;Ciara Nolan&apos;, frequency=&apos;monthly&apos;, contributionAmount=75.5, unitsHeld=333.3333333, unitPrice=2.75, nextOrderUnits=0.00004}](7)" classname="tests.MembersValidationTest" time="0.424">
     <failure message="The following asserts failed:&#10;	&#10;Member ID: M007&#10;Field: Order Status&#10;Expected: Blocked&#10;Actual: Ready&#10;Status: FAILED&#10;Business Rule: R7&#10; expected [Blocked] but found [Ready]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
 The following asserts failed:
 	
@@ -1228,7 +1228,7 @@ Business Rule: R7
 
 ]]></system-out>
   </testcase>
-  <testcase name="testMemberRowCalculations[Member{memberId=&apos;M008&apos;, name=&apos;Darragh Quinn&apos;, frequency=&apos;fortnightly&apos;, contributionAmount=25, unitsHeld=1.0000005, unitPrice=9.9999, nextOrderUnits=0.00006}](8)" classname="tests.MembersValidationTest" time="0.295">
+  <testcase name="testMemberRowCalculations[Member{memberId=&apos;M008&apos;, name=&apos;Darragh Quinn&apos;, frequency=&apos;fortnightly&apos;, contributionAmount=25, unitsHeld=1.0000005, unitPrice=9.9999, nextOrderUnits=0.00006}](8)" classname="tests.MembersValidationTest" time="0.454">
     <failure message="The following asserts failed:&#10;	&#10;Member ID: M008&#10;Field: Annual Contribution&#10;Expected: €650.00&#10;Actual: €600.00&#10;Status: FAILED&#10;Business Rule: R1 / R2&#10; expected [€650.00] but found [€600.00]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
 The following asserts failed:
 	
@@ -1357,7 +1357,7 @@ Business Rule: R7
 
 ]]></system-out>
   </testcase>
-  <testcase name="testMembersTableIntegrity" classname="tests.MembersValidationTest" time="0.131">
+  <testcase name="testMembersTableIntegrity" classname="tests.MembersValidationTest" time="0.188">
     <system-out><![CDATA[================================================================================
 MEMBERS TABLE INTEGRITY CHECK
   Expected member count (from data/members.json): 8
@@ -1365,33 +1365,33 @@ MEMBERS TABLE INTEGRITY CHECK
   Unique rendered member IDs: 8
 ]]></system-out>
   </testcase>
-  <testcase name="testAnnualForDirectInvocation[100, weekly, weekly, Exact lowercase weekly](1)" classname="tests.ApplicationCoreLogicTest" time="0.07">
+  <testcase name="testAnnualForDirectInvocation[100, weekly, weekly, Exact lowercase weekly](1)" classname="tests.ApplicationCoreLogicTest" time="0.078">
     <system-out><![CDATA[================================================================================
 DIRECT JS CALL: annualFor(100, 'weekly') | Exact lowercase weekly
   EXPECTED (per R1/R2, spec-correct): 5200.00
   ACTUAL (real app annualFor() result): 5200.0
 ]]></system-out>
-    <system-err><![CDATA[Oct 30, 2026 10:08:58 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Oct 30, 2026 10:18:46 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 155
-Oct 30, 2026 10:08:58 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Oct 30, 2026 10:18:46 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 155.0.8059.85. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="testAnnualForDirectInvocation[100, Weekly, weekly, Title-case Weekly](2)" classname="tests.ApplicationCoreLogicTest" time="0.08">
+  <testcase name="testAnnualForDirectInvocation[100, Weekly, weekly, Title-case Weekly](2)" classname="tests.ApplicationCoreLogicTest" time="0.108">
     <system-out><![CDATA[================================================================================
 DIRECT JS CALL: annualFor(100, 'Weekly') | Title-case Weekly
   EXPECTED (per R1/R2, spec-correct): 5200.00
   ACTUAL (real app annualFor() result): 5200.0
 ]]></system-out>
   </testcase>
-  <testcase name="testAnnualForDirectInvocation[100, WEEKLY, weekly, Uppercase WEEKLY](3)" classname="tests.ApplicationCoreLogicTest" time="0.155">
+  <testcase name="testAnnualForDirectInvocation[100, WEEKLY, weekly, Uppercase WEEKLY](3)" classname="tests.ApplicationCoreLogicTest" time="0.167">
     <system-out><![CDATA[================================================================================
 DIRECT JS CALL: annualFor(100, 'WEEKLY') | Uppercase WEEKLY
   EXPECTED (per R1/R2, spec-correct): 5200.00
   ACTUAL (real app annualFor() result): 5200.0
 ]]></system-out>
   </testcase>
-  <testcase name="testAnnualForDirectInvocation[100, fortnightly, fortnightly, Exact lowercase fortnightly](4)" classname="tests.ApplicationCoreLogicTest" time="0.058">
+  <testcase name="testAnnualForDirectInvocation[100, fortnightly, fortnightly, Exact lowercase fortnightly](4)" classname="tests.ApplicationCoreLogicTest" time="0.087">
     <failure message="annualFor(100, &apos;fortnightly&apos;) [Exact lowercase fortnightly] -&gt; expected 2600.00 per R1/R2 but app&apos;s real annualFor() returned 2400.0. Rule Reference: R1/R2. expected [2600.00] but found [2400.00]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: annualFor(100, 'fortnightly') [Exact lowercase fortnightly] -> expected 2600.00 per R1/R2 but app's real annualFor() returned 2400.0. Rule Reference: R1/R2. expected [2600.00] but found [2400.00]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
@@ -1435,7 +1435,7 @@ DIRECT JS CALL: annualFor(100, 'fortnightly') | Exact lowercase fortnightly
   ACTUAL (real app annualFor() result): 2400.0
 ]]></system-out>
   </testcase>
-  <testcase name="testAnnualForDirectInvocation[100, Fortnightly, fortnightly, Title-case Fortnightly](5)" classname="tests.ApplicationCoreLogicTest" time="0.049">
+  <testcase name="testAnnualForDirectInvocation[100, Fortnightly, fortnightly, Title-case Fortnightly](5)" classname="tests.ApplicationCoreLogicTest" time="0.085">
     <failure message="annualFor(100, &apos;Fortnightly&apos;) [Title-case Fortnightly] -&gt; expected 2600.00 per R1/R2 but app&apos;s real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [2600.00] but found [5200.00]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: annualFor(100, 'Fortnightly') [Title-case Fortnightly] -> expected 2600.00 per R1/R2 but app's real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [2600.00] but found [5200.00]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
@@ -1479,7 +1479,7 @@ DIRECT JS CALL: annualFor(100, 'Fortnightly') | Title-case Fortnightly
   ACTUAL (real app annualFor() result): 5200.0
 ]]></system-out>
   </testcase>
-  <testcase name="testAnnualForDirectInvocation[100, FORTNIGHTLY, fortnightly, Uppercase FORTNIGHTLY](6)" classname="tests.ApplicationCoreLogicTest" time="0.061">
+  <testcase name="testAnnualForDirectInvocation[100, FORTNIGHTLY, fortnightly, Uppercase FORTNIGHTLY](6)" classname="tests.ApplicationCoreLogicTest" time="0.072">
     <failure message="annualFor(100, &apos;FORTNIGHTLY&apos;) [Uppercase FORTNIGHTLY] -&gt; expected 2600.00 per R1/R2 but app&apos;s real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [2600.00] but found [5200.00]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: annualFor(100, 'FORTNIGHTLY') [Uppercase FORTNIGHTLY] -> expected 2600.00 per R1/R2 but app's real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [2600.00] but found [5200.00]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
@@ -1523,15 +1523,15 @@ DIRECT JS CALL: annualFor(100, 'FORTNIGHTLY') | Uppercase FORTNIGHTLY
   ACTUAL (real app annualFor() result): 5200.0
 ]]></system-out>
   </testcase>
-  <testcase name="testAnnualForDirectInvocation[100, monthly, monthly, Exact lowercase monthly](7)" classname="tests.ApplicationCoreLogicTest" time="0.106">
+  <testcase name="testAnnualForDirectInvocation[100, monthly, monthly, Exact lowercase monthly](7)" classname="tests.ApplicationCoreLogicTest" time="0.057">
     <system-out><![CDATA[================================================================================
 DIRECT JS CALL: annualFor(100, 'monthly') | Exact lowercase monthly
   EXPECTED (per R1/R2, spec-correct): 1200.00
   ACTUAL (real app annualFor() result): 1200.0
 ]]></system-out>
   </testcase>
-  <testcase name="testAnnualForDirectInvocation[100, Monthly, monthly, Title-case Monthly (same form as defect M004)](8)" classname="tests.ApplicationCoreLogicTest" time="0.095">
-    <failure message="annualFor(100, &apos;Monthly&apos;) [Title-case Monthly (same form as defect M004)] -&gt; expected 1200.00 per R1/R2 but app&apos;s real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [1200.00] but found [5200.00]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: annualFor(100, 'Monthly') [Title-case Monthly (same form as defect M004)] -> expected 1200.00 per R1/R2 but app's real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [1200.00] but found [5200.00]
+  <testcase name="testAnnualForDirectInvocation[100, Monthly, monthly, Title-case Monthly](8)" classname="tests.ApplicationCoreLogicTest" time="0.057">
+    <failure message="annualFor(100, &apos;Monthly&apos;) [Title-case Monthly] -&gt; expected 1200.00 per R1/R2 but app&apos;s real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [1200.00] but found [5200.00]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: annualFor(100, 'Monthly') [Title-case Monthly] -> expected 1200.00 per R1/R2 but app's real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [1200.00] but found [5200.00]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -1569,12 +1569,12 @@ DIRECT JS CALL: annualFor(100, 'monthly') | Exact lowercase monthly
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
     <system-out><![CDATA[================================================================================
-DIRECT JS CALL: annualFor(100, 'Monthly') | Title-case Monthly (same form as defect M004)
+DIRECT JS CALL: annualFor(100, 'Monthly') | Title-case Monthly
   EXPECTED (per R1/R2, spec-correct): 1200.00
   ACTUAL (real app annualFor() result): 5200.0
 ]]></system-out>
   </testcase>
-  <testcase name="testAnnualForDirectInvocation[100, MONTHLY, monthly, Uppercase MONTHLY](9)" classname="tests.ApplicationCoreLogicTest" time="0.093">
+  <testcase name="testAnnualForDirectInvocation[100, MONTHLY, monthly, Uppercase MONTHLY](9)" classname="tests.ApplicationCoreLogicTest" time="0.05">
     <failure message="annualFor(100, &apos;MONTHLY&apos;) [Uppercase MONTHLY] -&gt; expected 1200.00 per R1/R2 but app&apos;s real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [1200.00] but found [5200.00]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: annualFor(100, 'MONTHLY') [Uppercase MONTHLY] -> expected 1200.00 per R1/R2 but app's real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [1200.00] but found [5200.00]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
@@ -1618,14 +1618,14 @@ DIRECT JS CALL: annualFor(100, 'MONTHLY') | Uppercase MONTHLY
   ACTUAL (real app annualFor() result): 5200.0
 ]]></system-out>
   </testcase>
-  <testcase name="testAnnualForDirectInvocation[100, annual, annual, Exact lowercase annual](10)" classname="tests.ApplicationCoreLogicTest" time="0.071">
+  <testcase name="testAnnualForDirectInvocation[100, annual, annual, Exact lowercase annual](10)" classname="tests.ApplicationCoreLogicTest" time="0.052">
     <system-out><![CDATA[================================================================================
 DIRECT JS CALL: annualFor(100, 'annual') | Exact lowercase annual
   EXPECTED (per R1/R2, spec-correct): 100.00
   ACTUAL (real app annualFor() result): 100.0
 ]]></system-out>
   </testcase>
-  <testcase name="testAnnualForDirectInvocation[100, Annual, annual, Title-case Annual](11)" classname="tests.ApplicationCoreLogicTest" time="0.058">
+  <testcase name="testAnnualForDirectInvocation[100, Annual, annual, Title-case Annual](11)" classname="tests.ApplicationCoreLogicTest" time="0.046">
     <failure message="annualFor(100, &apos;Annual&apos;) [Title-case Annual] -&gt; expected 100.00 per R1/R2 but app&apos;s real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [100.00] but found [5200.00]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: annualFor(100, 'Annual') [Title-case Annual] -> expected 100.00 per R1/R2 but app's real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [100.00] but found [5200.00]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
@@ -1669,7 +1669,7 @@ DIRECT JS CALL: annualFor(100, 'Annual') | Title-case Annual
   ACTUAL (real app annualFor() result): 5200.0
 ]]></system-out>
   </testcase>
-  <testcase name="testAnnualForDirectInvocation[100, ANNUAL, annual, Uppercase ANNUAL](12)" classname="tests.ApplicationCoreLogicTest" time="0.056">
+  <testcase name="testAnnualForDirectInvocation[100, ANNUAL, annual, Uppercase ANNUAL](12)" classname="tests.ApplicationCoreLogicTest" time="0.06">
     <failure message="annualFor(100, &apos;ANNUAL&apos;) [Uppercase ANNUAL] -&gt; expected 100.00 per R1/R2 but app&apos;s real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [100.00] but found [5200.00]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: annualFor(100, 'ANNUAL') [Uppercase ANNUAL] -> expected 100.00 per R1/R2 but app's real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [100.00] but found [5200.00]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
@@ -1713,7 +1713,7 @@ DIRECT JS CALL: annualFor(100, 'ANNUAL') | Uppercase ANNUAL
   ACTUAL (real app annualFor() result): 5200.0
 ]]></system-out>
   </testcase>
-  <testcase name="testUnsupportedFrequencyFallbackBehaviorIsDocumented" classname="tests.ApplicationCoreLogicTest" time="0.102">
+  <testcase name="testUnsupportedFrequencyFallbackBehaviorIsDocumented" classname="tests.ApplicationCoreLogicTest" time="0.075">
     <system-out><![CDATA[================================================================================
 UNSUPPORTED FREQUENCY RISK DOCUMENTATION: annualFor(100, 'biweekly')
   Observed actual: 5200.0 (app silently falls back to the weekly multiplier, 52)
@@ -1722,7 +1722,7 @@ UNSUPPORTED FREQUENCY RISK DOCUMENTATION: annualFor(100, 'biweekly')
 ]]></system-out>
   </testcase>
   <testcase name="testFundValueRoundingAtHalfUpBoundary" classname="tests.CalculationUtilsBoundaryTest" time="0.001"/>
-  <testcase name="testOrderUnitsRoundingAndStatusBoundary[1.0E-5, 0.0000, Blocked, Rounds down to exactly zero](1)" classname="tests.CalculationUtilsBoundaryTest" time="0.014">
+  <testcase name="testOrderUnitsRoundingAndStatusBoundary[1.0E-5, 0.0000, Blocked, Rounds down to exactly zero](1)" classname="tests.CalculationUtilsBoundaryTest" time="0.013">
     <system-out><![CDATA[================================================================================
 BOUNDARY CHECK (CalculationUtils only): raw=1.0E-5 | Rounds down to exactly zero
   Expected rounded units: 0.0000 | Actual: 0.0000
@@ -1750,9 +1750,9 @@ BOUNDARY CHECK (CalculationUtils only): raw=4.49E-4 | Just below the 0.0004/0.00
   Expected status: Ready | Actual: Ready
 ]]></system-out>
   </testcase>
-  <testcase name="testOrderUnitsRoundingAndStatusBoundary[4.5E-4, 0.0005, Ready, Exact HALF_UP tie at the 4th decimal place (ambiguous per spec; HALF_UP chosen as documented baseline)](5)" classname="tests.CalculationUtilsBoundaryTest" time="0.002">
+  <testcase name="testOrderUnitsRoundingAndStatusBoundary[4.5E-4, 0.0005, Ready, Exact HALF_UP tie (ambiguous rounding boundary)](5)" classname="tests.CalculationUtilsBoundaryTest" time="0.003">
     <system-out><![CDATA[================================================================================
-BOUNDARY CHECK (CalculationUtils only): raw=4.5E-4 | Exact HALF_UP tie at the 4th decimal place (ambiguous per spec; HALF_UP chosen as documented baseline)
+BOUNDARY CHECK (CalculationUtils only): raw=4.5E-4 | Exact HALF_UP tie (ambiguous rounding boundary)
   Expected rounded units: 0.0005 | Actual: 0.0005
   Expected status: Ready | Actual: Ready
 ]]></system-out>
@@ -1771,14 +1771,14 @@ BOUNDARY CHECK (CalculationUtils only): raw=0.99989 | Just below 1.0000
   Expected status: Ready | Actual: Ready
 ]]></system-out>
   </testcase>
-  <testcase name="testOrderUnitsRoundingAndStatusBoundary[0.99996, 1.0000, Ready, Rounds up to exactly 1.0000, still non-zero -&gt; Ready](8)" classname="tests.CalculationUtilsBoundaryTest" time="0.001">
+  <testcase name="testOrderUnitsRoundingAndStatusBoundary[0.99996, 1.0000, Ready, Rounds up to exactly 1.0000, still non-zero -&gt; Ready](8)" classname="tests.CalculationUtilsBoundaryTest" time="0.002">
     <system-out><![CDATA[================================================================================
 BOUNDARY CHECK (CalculationUtils only): raw=0.99996 | Rounds up to exactly 1.0000, still non-zero -> Ready
   Expected rounded units: 1.0000 | Actual: 1.0000
   Expected status: Ready | Actual: Ready
 ]]></system-out>
   </testcase>
-  <testcase name="testOrderUnitsRoundingAndStatusBoundary[0.0, 0.0000, Blocked, Exact zero (regression guard, matches member M006)](9)" classname="tests.CalculationUtilsBoundaryTest" time="0.001">
+  <testcase name="testOrderUnitsRoundingAndStatusBoundary[0.0, 0.0000, Blocked, Exact zero (regression guard, matches member M006)](9)" classname="tests.CalculationUtilsBoundaryTest" time="0.003">
     <system-out><![CDATA[================================================================================
 BOUNDARY CHECK (CalculationUtils only): raw=0.0 | Exact zero (regression guard, matches member M006)
   Expected rounded units: 0.0000 | Actual: 0.0000

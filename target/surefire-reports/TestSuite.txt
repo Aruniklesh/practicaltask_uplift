@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 54, Failures: 16, Errors: 0, Skipped: 0, Time elapsed: 25.31 s <<< FAILURE! -- in TestSuite
-tests.CalculatorTest.testAnnualContributionCalculator[[TC02_FortnightlyPayment] Standard calculation with Fortnightly payment frequency (Multiplier: 26) (Input: '50.00', Freq: 'fortnightly')](2) -- Time elapsed: 0.588 s <<< FAILURE!
+Tests run: 54, Failures: 16, Errors: 0, Skipped: 0, Time elapsed: 28.33 s <<< FAILURE! -- in TestSuite
+tests.CalculatorTest.testAnnualContributionCalculator[[TC02_FortnightlyPayment] Standard calculation with Fortnightly payment frequency (Multiplier: 26) (Input: '50.00', Freq: 'fortnightly')](2) -- Time elapsed: 0.682 s <<< FAILURE!
 java.lang.AssertionError: [TC02_FortnightlyPayment] Calculation mismatch for amount='50.00', freq='fortnightly'. Rule Ref: R1: 50.00 * 26 = 1,300.00 (Note: Application defect uses 24) expected [Annual contribution: €1,300.00] but found [Annual contribution: €1,200.00]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
@@ -41,8 +41,8 @@ java.lang.AssertionError: [TC02_FortnightlyPayment] Calculation mismatch for amo
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-tests.CalculatorTest.testAnnualContributionCalculator[[TC12_NegativeAmount] Validation test for negative contribution amount (Input: '-50.00', Freq: 'monthly')](12) -- Time elapsed: 0.362 s <<< FAILURE!
-java.lang.AssertionError: [TC12_NegativeAmount] Validation error mismatch for amount='-50.00'. Rule Ref: R8: Negative amount must show 'Amount cannot be negative' (Note: App defect fails to validate) expected [Amount cannot be negative] but found []
+tests.CalculatorTest.testAnnualContributionCalculator[[TC12_NegativeAmount] Validation test for negative contribution amount (Input: '-50.00', Freq: 'monthly')](12) -- Time elapsed: 0.468 s <<< FAILURE!
+java.lang.AssertionError: [TC12_NegativeAmount] Validation error mismatch for amount='-50.00'. Rule Ref: R8 (app defect: does not validate — see BUG-003) expected [Amount cannot be negative] but found []
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -80,7 +80,7 @@ java.lang.AssertionError: [TC12_NegativeAmount] Validation error mismatch for am
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-tests.CalculatorTest.testAnnualContributionCalculator[[TC14_NegativeDecimalAmount] Validation test for negative fractional decimal amount (Input: '-10.50', Freq: 'weekly')](14) -- Time elapsed: 0.265 s <<< FAILURE!
+tests.CalculatorTest.testAnnualContributionCalculator[[TC14_NegativeDecimalAmount] Validation test for negative fractional decimal amount (Input: '-10.50', Freq: 'weekly')](14) -- Time elapsed: 0.466 s <<< FAILURE!
 java.lang.AssertionError: [TC14_NegativeDecimalAmount] Validation error mismatch for amount='-10.50'. Rule Ref: R8: Negative decimal must show 'Amount cannot be negative' expected [Amount cannot be negative] but found []
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
@@ -119,8 +119,8 @@ java.lang.AssertionError: [TC14_NegativeDecimalAmount] Validation error mismatch
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-tests.CalculatorTest.testAnnualContributionCalculator[[TC21_HexNotationAmount_AmbiguousEdgeCase] Amount expressed as a hexadecimal literal. JS Number('0x10') parses this to 16 (not NaN), so the app's isNaN-based check does not reject it, while Java's BigDecimal does not support hex notation and throws. This test documents a genuine app-vs-spec mismatch (see BUG_REPORTS.md Finding F1) rather than asserting a fabricated requirement. (Input: '0x10', Freq: 'weekly')](21) -- Time elapsed: 0.479 s <<< FAILURE!
-java.lang.AssertionError: [TC21_HexNotationAmount_AmbiguousEdgeCase] Validation error mismatch for amount='0x10'. Rule Ref: R8 (ambiguous): a hex literal is not a normal monetary numeric input; see BUG_REPORTS.md Finding F1 for the full analysis of this expected FAIL. expected [Enter a valid amount] but found []
+tests.CalculatorTest.testAnnualContributionCalculator[[TC21_HexNotationAmount_AmbiguousEdgeCase] Hexadecimal amount input (ambiguous edge case) (Input: '0x10', Freq: 'weekly')](21) -- Time elapsed: 0.515 s <<< FAILURE!
+java.lang.AssertionError: [TC21_HexNotationAmount_AmbiguousEdgeCase] Validation error mismatch for amount='0x10'. Rule Ref: R8 (ambiguous) — see BUG_REPORTS.md Finding F1 expected [Enter a valid amount] but found []
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -158,8 +158,8 @@ java.lang.AssertionError: [TC21_HexNotationAmount_AmbiguousEdgeCase] Validation 
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-tests.CalculatorTest.testAnnualContributionCalculator[[TC22_InfinityAmount_AmbiguousEdgeCase] Amount literally 'Infinity'. JS Number('Infinity') is a valid, non-NaN number, so the app's isNaN-based check accepts it and renders 'Annual contribution: €∞' instead of an error. This test documents a genuine app-vs-spec mismatch (see BUG_REPORTS.md Finding F2) rather than asserting a fabricated requirement. (Input: 'Infinity', Freq: 'weekly')](22) -- Time elapsed: 0.284 s <<< FAILURE!
-java.lang.AssertionError: [TC22_InfinityAmount_AmbiguousEdgeCase] Validation error mismatch for amount='Infinity'. Rule Ref: R8 (ambiguous): see BUG_REPORTS.md Finding F2 for the full analysis of this expected FAIL. expected [Enter a valid amount] but found []
+tests.CalculatorTest.testAnnualContributionCalculator[[TC22_InfinityAmount_AmbiguousEdgeCase] Literal 'Infinity' as amount (ambiguous edge case) (Input: 'Infinity', Freq: 'weekly')](22) -- Time elapsed: 0.541 s <<< FAILURE!
+java.lang.AssertionError: [TC22_InfinityAmount_AmbiguousEdgeCase] Validation error mismatch for amount='Infinity'. Rule Ref: R8 (ambiguous) — see BUG_REPORTS.md Finding F2 expected [Enter a valid amount] but found []
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -197,7 +197,7 @@ java.lang.AssertionError: [TC22_InfinityAmount_AmbiguousEdgeCase] Validation err
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-tests.MembersValidationTest.testMemberRowCalculations[Member{memberId='M002', name='Liam Walsh', frequency='fortnightly', contributionAmount=50, unitsHeld=980.1234567, unitPrice=2.1189, nextOrderUnits=4.5}](2) -- Time elapsed: 0.581 s <<< FAILURE!
+tests.MembersValidationTest.testMemberRowCalculations[Member{memberId='M002', name='Liam Walsh', frequency='fortnightly', contributionAmount=50, unitsHeld=980.1234567, unitPrice=2.1189, nextOrderUnits=4.5}](2) -- Time elapsed: 0.496 s <<< FAILURE!
 java.lang.AssertionError: 
 The following asserts failed:
 	
@@ -242,7 +242,7 @@ Business Rule: R1 / R2
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-tests.MembersValidationTest.testMemberRowCalculations[Member{memberId='M004', name='Conor Doyle', frequency='Monthly', contributionAmount=150, unitsHeld=610.0000001, unitPrice=4.0021, nextOrderUnits=3.25}](4) -- Time elapsed: 0.455 s <<< FAILURE!
+tests.MembersValidationTest.testMemberRowCalculations[Member{memberId='M004', name='Conor Doyle', frequency='Monthly', contributionAmount=150, unitsHeld=610.0000001, unitPrice=4.0021, nextOrderUnits=3.25}](4) -- Time elapsed: 0.536 s <<< FAILURE!
 java.lang.AssertionError: 
 The following asserts failed:
 	
@@ -287,7 +287,7 @@ Business Rule: R1 / R2
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-tests.MembersValidationTest.testMemberRowCalculations[Member{memberId='M007', name='Ciara Nolan', frequency='monthly', contributionAmount=75.5, unitsHeld=333.3333333, unitPrice=2.75, nextOrderUnits=0.00004}](7) -- Time elapsed: 0.284 s <<< FAILURE!
+tests.MembersValidationTest.testMemberRowCalculations[Member{memberId='M007', name='Ciara Nolan', frequency='monthly', contributionAmount=75.5, unitsHeld=333.3333333, unitPrice=2.75, nextOrderUnits=0.00004}](7) -- Time elapsed: 0.424 s <<< FAILURE!
 java.lang.AssertionError: 
 The following asserts failed:
 	
@@ -332,7 +332,7 @@ Business Rule: R7
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-tests.MembersValidationTest.testMemberRowCalculations[Member{memberId='M008', name='Darragh Quinn', frequency='fortnightly', contributionAmount=25, unitsHeld=1.0000005, unitPrice=9.9999, nextOrderUnits=0.00006}](8) -- Time elapsed: 0.295 s <<< FAILURE!
+tests.MembersValidationTest.testMemberRowCalculations[Member{memberId='M008', name='Darragh Quinn', frequency='fortnightly', contributionAmount=25, unitsHeld=1.0000005, unitPrice=9.9999, nextOrderUnits=0.00006}](8) -- Time elapsed: 0.454 s <<< FAILURE!
 java.lang.AssertionError: 
 The following asserts failed:
 	
@@ -377,7 +377,7 @@ Business Rule: R1 / R2
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation[100, fortnightly, fortnightly, Exact lowercase fortnightly](4) -- Time elapsed: 0.058 s <<< FAILURE!
+tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation[100, fortnightly, fortnightly, Exact lowercase fortnightly](4) -- Time elapsed: 0.087 s <<< FAILURE!
 java.lang.AssertionError: annualFor(100, 'fortnightly') [Exact lowercase fortnightly] -> expected 2600.00 per R1/R2 but app's real annualFor() returned 2400.0. Rule Reference: R1/R2. expected [2600.00] but found [2400.00]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
@@ -415,7 +415,7 @@ java.lang.AssertionError: annualFor(100, 'fortnightly') [Exact lowercase fortnig
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation[100, Fortnightly, fortnightly, Title-case Fortnightly](5) -- Time elapsed: 0.049 s <<< FAILURE!
+tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation[100, Fortnightly, fortnightly, Title-case Fortnightly](5) -- Time elapsed: 0.085 s <<< FAILURE!
 java.lang.AssertionError: annualFor(100, 'Fortnightly') [Title-case Fortnightly] -> expected 2600.00 per R1/R2 but app's real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [2600.00] but found [5200.00]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
@@ -453,7 +453,7 @@ java.lang.AssertionError: annualFor(100, 'Fortnightly') [Title-case Fortnightly]
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation[100, FORTNIGHTLY, fortnightly, Uppercase FORTNIGHTLY](6) -- Time elapsed: 0.061 s <<< FAILURE!
+tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation[100, FORTNIGHTLY, fortnightly, Uppercase FORTNIGHTLY](6) -- Time elapsed: 0.072 s <<< FAILURE!
 java.lang.AssertionError: annualFor(100, 'FORTNIGHTLY') [Uppercase FORTNIGHTLY] -> expected 2600.00 per R1/R2 but app's real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [2600.00] but found [5200.00]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
@@ -491,8 +491,8 @@ java.lang.AssertionError: annualFor(100, 'FORTNIGHTLY') [Uppercase FORTNIGHTLY] 
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation[100, Monthly, monthly, Title-case Monthly (same form as defect M004)](8) -- Time elapsed: 0.095 s <<< FAILURE!
-java.lang.AssertionError: annualFor(100, 'Monthly') [Title-case Monthly (same form as defect M004)] -> expected 1200.00 per R1/R2 but app's real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [1200.00] but found [5200.00]
+tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation[100, Monthly, monthly, Title-case Monthly](8) -- Time elapsed: 0.057 s <<< FAILURE!
+java.lang.AssertionError: annualFor(100, 'Monthly') [Title-case Monthly] -> expected 1200.00 per R1/R2 but app's real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [1200.00] but found [5200.00]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -529,7 +529,7 @@ java.lang.AssertionError: annualFor(100, 'Monthly') [Title-case Monthly (same fo
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation[100, MONTHLY, monthly, Uppercase MONTHLY](9) -- Time elapsed: 0.093 s <<< FAILURE!
+tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation[100, MONTHLY, monthly, Uppercase MONTHLY](9) -- Time elapsed: 0.050 s <<< FAILURE!
 java.lang.AssertionError: annualFor(100, 'MONTHLY') [Uppercase MONTHLY] -> expected 1200.00 per R1/R2 but app's real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [1200.00] but found [5200.00]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
@@ -567,7 +567,7 @@ java.lang.AssertionError: annualFor(100, 'MONTHLY') [Uppercase MONTHLY] -> expec
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation[100, Annual, annual, Title-case Annual](11) -- Time elapsed: 0.058 s <<< FAILURE!
+tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation[100, Annual, annual, Title-case Annual](11) -- Time elapsed: 0.046 s <<< FAILURE!
 java.lang.AssertionError: annualFor(100, 'Annual') [Title-case Annual] -> expected 100.00 per R1/R2 but app's real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [100.00] but found [5200.00]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
@@ -605,7 +605,7 @@ java.lang.AssertionError: annualFor(100, 'Annual') [Title-case Annual] -> expect
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation[100, ANNUAL, annual, Uppercase ANNUAL](12) -- Time elapsed: 0.056 s <<< FAILURE!
+tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation[100, ANNUAL, annual, Uppercase ANNUAL](12) -- Time elapsed: 0.060 s <<< FAILURE!
 java.lang.AssertionError: annualFor(100, 'ANNUAL') [Uppercase ANNUAL] -> expected 100.00 per R1/R2 but app's real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [100.00] but found [5200.00]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)

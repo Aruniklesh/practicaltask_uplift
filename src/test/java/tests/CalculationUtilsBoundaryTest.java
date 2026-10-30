@@ -2,8 +2,10 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import utils.CalculationUtils;
+import utils.TestListener;
 
 import java.math.BigDecimal;
 
@@ -25,7 +27,12 @@ import java.math.BigDecimal;
  * consistency (defending every UI-level assertion that depends on it), but R6/R7 boundary
  * behavior of the LIVE APPLICATION at these specific thresholds remains genuinely untested
  * and is documented as a coverage gap in EDGE_CASE_COVERAGE.md.
+ *
+ * Does not extend BaseTest (no browser/driver needed for a pure calculation check), so
+ * TestListener is attached directly here — otherwise this class's results would run and
+ * pass correctly but never appear in the ExtentReports HTML (only in the raw Surefire XML).
  */
+@Listeners(TestListener.class)
 public class CalculationUtilsBoundaryTest {
 
     @DataProvider(name = "orderUnitsBoundaries")
@@ -36,7 +43,7 @@ public class CalculationUtilsBoundaryTest {
                 {0.00004, "0.0000", "Blocked", "Same raw value as member M007 (regression guard)"},
                 {0.00006, "0.0001", "Ready", "Same raw value as member M008 (regression guard)"},
                 {0.000449, "0.0004", "Ready", "Just below the 0.0004/0.0005 boundary"},
-                {0.00045, "0.0005", "Ready", "Exact HALF_UP tie at the 4th decimal place (ambiguous per spec; HALF_UP chosen as documented baseline)"},
+                {0.00045, "0.0005", "Ready", "Exact HALF_UP tie (ambiguous rounding boundary)"},
                 {0.000451, "0.0005", "Ready", "Just above the 0.0004/0.0005 boundary"},
                 {0.99989, "0.9999", "Ready", "Just below 1.0000"},
                 {0.99996, "1.0000", "Ready", "Rounds up to exactly 1.0000, still non-zero -> Ready"},
@@ -46,7 +53,7 @@ public class CalculationUtilsBoundaryTest {
 
     @Test(
             dataProvider = "orderUnitsBoundaries",
-            description = "Verifies CalculationUtils rounding (R6) and status derivation (R7) at boundary values absent from the client fixture data. Utility-level only; see class-level javadoc for scope."
+            description = "Order Units rounding & status at R6/R7 boundaries"
     )
     public void testOrderUnitsRoundingAndStatusBoundary(double raw, String expectedRoundedUnits, String expectedStatus, String note) {
         String actualRoundedUnits = CalculationUtils.formatOrderUnits(raw);
@@ -63,7 +70,7 @@ public class CalculationUtilsBoundaryTest {
                 String.format("R7 status mismatch for raw=%s (%s). Rule Reference: R7.", raw, note));
     }
 
-    @Test(description = "Confirms the documented HALF_UP rounding baseline for Fund Value (R5) at a classic floating-point rounding trap value (2.005), at the utility level.")
+    @Test(description = "Fund Value rounding at a HALF_UP tie (R5)")
     public void testFundValueRoundingAtHalfUpBoundary() {
         BigDecimal fundValue = CalculationUtils.calculateFundValue(1.0, 2.005);
         Assert.assertEquals(fundValue, new BigDecimal("2.01"),

@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>6/7/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Oct 30 22:08:57 IST 2026</td>
+<td>Started on:</td><td>Fri Oct 30 22:18:45 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>3 seconds (3398 ms)</td>
+<tr><td>Total time:</td><td>3 seconds (3217 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,147 +76,12 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation()'><b>testAnnualForDirectInvocation</b><br>Test class: tests.ApplicationCoreLogicTest<br>Test method: Direct invocation of the app's own annualFor() JS function to prove R1/R2 case-insensitivity (or its absence) across every frequency, bypassing the Calculator dropdown's fixed-lowercase-value limitation.<br>Parameters: 100, fortnightly, fortnightly, Exact lowercase fortnightly</td>
-<td><div><pre>java.lang.AssertionError: annualFor(100, &apos;fortnightly&apos;) [Exact lowercase fortnightly] -&gt; expected 2600.00 per R1/R2 but app&apos;s real annualFor() returned 2400.0. Rule Reference: R1/R2. expected [2600.00] but found [2400.00]
-	at tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation(ApplicationCoreLogicTest.java:93)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace466322841", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace466322841'><pre>java.lang.AssertionError: annualFor(100, &apos;fortnightly&apos;) [Exact lowercase fortnightly] -&gt; expected 2600.00 per R1/R2 but app&apos;s real annualFor() returned 2400.0. Rule Reference: R1/R2. expected [2600.00] but found [2400.00]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation(ApplicationCoreLogicTest.java:93)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-</pre></div></td>
-<td>0</td>
-<td>tests.ApplicationCoreLogicTest@18271936</td></tr>
-<tr>
-<td title='tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation()'><b>testAnnualForDirectInvocation</b><br>Test class: tests.ApplicationCoreLogicTest<br>Test method: Direct invocation of the app's own annualFor() JS function to prove R1/R2 case-insensitivity (or its absence) across every frequency, bypassing the Calculator dropdown's fixed-lowercase-value limitation.<br>Parameters: 100, FORTNIGHTLY, fortnightly, Uppercase FORTNIGHTLY</td>
-<td><div><pre>java.lang.AssertionError: annualFor(100, &apos;FORTNIGHTLY&apos;) [Uppercase FORTNIGHTLY] -&gt; expected 2600.00 per R1/R2 but app&apos;s real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [2600.00] but found [5200.00]
-	at tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation(ApplicationCoreLogicTest.java:93)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1035726142", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1035726142'><pre>java.lang.AssertionError: annualFor(100, &apos;FORTNIGHTLY&apos;) [Uppercase FORTNIGHTLY] -&gt; expected 2600.00 per R1/R2 but app&apos;s real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [2600.00] but found [5200.00]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation(ApplicationCoreLogicTest.java:93)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-</pre></div></td>
-<td>0</td>
-<td>tests.ApplicationCoreLogicTest@18271936</td></tr>
-<tr>
-<td title='tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation()'><b>testAnnualForDirectInvocation</b><br>Test class: tests.ApplicationCoreLogicTest<br>Test method: Direct invocation of the app's own annualFor() JS function to prove R1/R2 case-insensitivity (or its absence) across every frequency, bypassing the Calculator dropdown's fixed-lowercase-value limitation.<br>Parameters: 100, Annual, annual, Title-case Annual</td>
-<td><div><pre>java.lang.AssertionError: annualFor(100, &apos;Annual&apos;) [Title-case Annual] -&gt; expected 100.00 per R1/R2 but app&apos;s real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [100.00] but found [5200.00]
-	at tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation(ApplicationCoreLogicTest.java:93)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace234107628", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace234107628'><pre>java.lang.AssertionError: annualFor(100, &apos;Annual&apos;) [Title-case Annual] -&gt; expected 100.00 per R1/R2 but app&apos;s real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [100.00] but found [5200.00]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation(ApplicationCoreLogicTest.java:93)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-</pre></div></td>
-<td>0</td>
-<td>tests.ApplicationCoreLogicTest@18271936</td></tr>
-<tr>
-<td title='tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation()'><b>testAnnualForDirectInvocation</b><br>Test class: tests.ApplicationCoreLogicTest<br>Test method: Direct invocation of the app's own annualFor() JS function to prove R1/R2 case-insensitivity (or its absence) across every frequency, bypassing the Calculator dropdown's fixed-lowercase-value limitation.<br>Parameters: 100, Fortnightly, fortnightly, Title-case Fortnightly</td>
+<td title='tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation()'><b>testAnnualForDirectInvocation</b><br>Test class: tests.ApplicationCoreLogicTest<br>Test method: annualFor() case-insensitivity check (R1/R2)<br>Parameters: 100, Fortnightly, fortnightly, Title-case Fortnightly</td>
 <td><div><pre>java.lang.AssertionError: annualFor(100, &apos;Fortnightly&apos;) [Title-case Fortnightly] -&gt; expected 2600.00 per R1/R2 but app&apos;s real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [2600.00] but found [5200.00]
 	at tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation(ApplicationCoreLogicTest.java:93)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace448945595", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace448945595'><pre>java.lang.AssertionError: annualFor(100, &apos;Fortnightly&apos;) [Title-case Fortnightly] -&gt; expected 2600.00 per R1/R2 but app&apos;s real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [2600.00] but found [5200.00]
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1503837905", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1503837905'><pre>java.lang.AssertionError: annualFor(100, &apos;Fortnightly&apos;) [Title-case Fortnightly] -&gt; expected 2600.00 per R1/R2 but app&apos;s real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [2600.00] but found [5200.00]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -256,12 +121,12 @@ function toggleAllBoxes() {
 <td>0</td>
 <td>tests.ApplicationCoreLogicTest@18271936</td></tr>
 <tr>
-<td title='tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation()'><b>testAnnualForDirectInvocation</b><br>Test class: tests.ApplicationCoreLogicTest<br>Test method: Direct invocation of the app's own annualFor() JS function to prove R1/R2 case-insensitivity (or its absence) across every frequency, bypassing the Calculator dropdown's fixed-lowercase-value limitation.<br>Parameters: 100, MONTHLY, monthly, Uppercase MONTHLY</td>
+<td title='tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation()'><b>testAnnualForDirectInvocation</b><br>Test class: tests.ApplicationCoreLogicTest<br>Test method: annualFor() case-insensitivity check (R1/R2)<br>Parameters: 100, MONTHLY, monthly, Uppercase MONTHLY</td>
 <td><div><pre>java.lang.AssertionError: annualFor(100, &apos;MONTHLY&apos;) [Uppercase MONTHLY] -&gt; expected 1200.00 per R1/R2 but app&apos;s real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [1200.00] but found [5200.00]
 	at tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation(ApplicationCoreLogicTest.java:93)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1913649844", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1913649844'><pre>java.lang.AssertionError: annualFor(100, &apos;MONTHLY&apos;) [Uppercase MONTHLY] -&gt; expected 1200.00 per R1/R2 but app&apos;s real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [1200.00] but found [5200.00]
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2045532088", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2045532088'><pre>java.lang.AssertionError: annualFor(100, &apos;MONTHLY&apos;) [Uppercase MONTHLY] -&gt; expected 1200.00 per R1/R2 but app&apos;s real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [1200.00] but found [5200.00]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -301,12 +166,12 @@ function toggleAllBoxes() {
 <td>0</td>
 <td>tests.ApplicationCoreLogicTest@18271936</td></tr>
 <tr>
-<td title='tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation()'><b>testAnnualForDirectInvocation</b><br>Test class: tests.ApplicationCoreLogicTest<br>Test method: Direct invocation of the app's own annualFor() JS function to prove R1/R2 case-insensitivity (or its absence) across every frequency, bypassing the Calculator dropdown's fixed-lowercase-value limitation.<br>Parameters: 100, Monthly, monthly, Title-case Monthly (same form as defect M004)</td>
-<td><div><pre>java.lang.AssertionError: annualFor(100, &apos;Monthly&apos;) [Title-case Monthly (same form as defect M004)] -&gt; expected 1200.00 per R1/R2 but app&apos;s real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [1200.00] but found [5200.00]
+<td title='tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation()'><b>testAnnualForDirectInvocation</b><br>Test class: tests.ApplicationCoreLogicTest<br>Test method: annualFor() case-insensitivity check (R1/R2)<br>Parameters: 100, fortnightly, fortnightly, Exact lowercase fortnightly</td>
+<td><div><pre>java.lang.AssertionError: annualFor(100, &apos;fortnightly&apos;) [Exact lowercase fortnightly] -&gt; expected 2600.00 per R1/R2 but app&apos;s real annualFor() returned 2400.0. Rule Reference: R1/R2. expected [2600.00] but found [2400.00]
 	at tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation(ApplicationCoreLogicTest.java:93)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace931940545", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace931940545'><pre>java.lang.AssertionError: annualFor(100, &apos;Monthly&apos;) [Title-case Monthly (same form as defect M004)] -&gt; expected 1200.00 per R1/R2 but app&apos;s real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [1200.00] but found [5200.00]
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1327842480", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1327842480'><pre>java.lang.AssertionError: annualFor(100, &apos;fortnightly&apos;) [Exact lowercase fortnightly] -&gt; expected 2600.00 per R1/R2 but app&apos;s real annualFor() returned 2400.0. Rule Reference: R1/R2. expected [2600.00] but found [2400.00]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -346,12 +211,147 @@ function toggleAllBoxes() {
 <td>0</td>
 <td>tests.ApplicationCoreLogicTest@18271936</td></tr>
 <tr>
-<td title='tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation()'><b>testAnnualForDirectInvocation</b><br>Test class: tests.ApplicationCoreLogicTest<br>Test method: Direct invocation of the app's own annualFor() JS function to prove R1/R2 case-insensitivity (or its absence) across every frequency, bypassing the Calculator dropdown's fixed-lowercase-value limitation.<br>Parameters: 100, ANNUAL, annual, Uppercase ANNUAL</td>
+<td title='tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation()'><b>testAnnualForDirectInvocation</b><br>Test class: tests.ApplicationCoreLogicTest<br>Test method: annualFor() case-insensitivity check (R1/R2)<br>Parameters: 100, Annual, annual, Title-case Annual</td>
+<td><div><pre>java.lang.AssertionError: annualFor(100, &apos;Annual&apos;) [Title-case Annual] -&gt; expected 100.00 per R1/R2 but app&apos;s real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [100.00] but found [5200.00]
+	at tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation(ApplicationCoreLogicTest.java:93)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace153416689", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace153416689'><pre>java.lang.AssertionError: annualFor(100, &apos;Annual&apos;) [Title-case Annual] -&gt; expected 100.00 per R1/R2 but app&apos;s real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [100.00] but found [5200.00]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation(ApplicationCoreLogicTest.java:93)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.ApplicationCoreLogicTest@18271936</td></tr>
+<tr>
+<td title='tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation()'><b>testAnnualForDirectInvocation</b><br>Test class: tests.ApplicationCoreLogicTest<br>Test method: annualFor() case-insensitivity check (R1/R2)<br>Parameters: 100, Monthly, monthly, Title-case Monthly</td>
+<td><div><pre>java.lang.AssertionError: annualFor(100, &apos;Monthly&apos;) [Title-case Monthly] -&gt; expected 1200.00 per R1/R2 but app&apos;s real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [1200.00] but found [5200.00]
+	at tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation(ApplicationCoreLogicTest.java:93)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1355074", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1355074'><pre>java.lang.AssertionError: annualFor(100, &apos;Monthly&apos;) [Title-case Monthly] -&gt; expected 1200.00 per R1/R2 but app&apos;s real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [1200.00] but found [5200.00]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation(ApplicationCoreLogicTest.java:93)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.ApplicationCoreLogicTest@18271936</td></tr>
+<tr>
+<td title='tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation()'><b>testAnnualForDirectInvocation</b><br>Test class: tests.ApplicationCoreLogicTest<br>Test method: annualFor() case-insensitivity check (R1/R2)<br>Parameters: 100, FORTNIGHTLY, fortnightly, Uppercase FORTNIGHTLY</td>
+<td><div><pre>java.lang.AssertionError: annualFor(100, &apos;FORTNIGHTLY&apos;) [Uppercase FORTNIGHTLY] -&gt; expected 2600.00 per R1/R2 but app&apos;s real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [2600.00] but found [5200.00]
+	at tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation(ApplicationCoreLogicTest.java:93)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1914928104", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1914928104'><pre>java.lang.AssertionError: annualFor(100, &apos;FORTNIGHTLY&apos;) [Uppercase FORTNIGHTLY] -&gt; expected 2600.00 per R1/R2 but app&apos;s real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [2600.00] but found [5200.00]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation(ApplicationCoreLogicTest.java:93)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.ApplicationCoreLogicTest@18271936</td></tr>
+<tr>
+<td title='tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation()'><b>testAnnualForDirectInvocation</b><br>Test class: tests.ApplicationCoreLogicTest<br>Test method: annualFor() case-insensitivity check (R1/R2)<br>Parameters: 100, ANNUAL, annual, Uppercase ANNUAL</td>
 <td><div><pre>java.lang.AssertionError: annualFor(100, &apos;ANNUAL&apos;) [Uppercase ANNUAL] -&gt; expected 100.00 per R1/R2 but app&apos;s real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [100.00] but found [5200.00]
 	at tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation(ApplicationCoreLogicTest.java:93)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace63622279", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace63622279'><pre>java.lang.AssertionError: annualFor(100, &apos;ANNUAL&apos;) [Uppercase ANNUAL] -&gt; expected 100.00 per R1/R2 but app&apos;s real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [100.00] but found [5200.00]
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace785880972", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace785880972'><pre>java.lang.AssertionError: annualFor(100, &apos;ANNUAL&apos;) [Uppercase ANNUAL] -&gt; expected 100.00 per R1/R2 but app&apos;s real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [100.00] but found [5200.00]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -400,32 +400,32 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation()'><b>testAnnualForDirectInvocation</b><br>Test class: tests.ApplicationCoreLogicTest<br>Test method: Direct invocation of the app's own annualFor() JS function to prove R1/R2 case-insensitivity (or its absence) across every frequency, bypassing the Calculator dropdown's fixed-lowercase-value limitation.<br>Parameters: 100, annual, annual, Exact lowercase annual</td>
+<td title='tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation()'><b>testAnnualForDirectInvocation</b><br>Test class: tests.ApplicationCoreLogicTest<br>Test method: annualFor() case-insensitivity check (R1/R2)<br>Parameters: 100, WEEKLY, weekly, Uppercase WEEKLY</td>
 <td></td>
 <td>0</td>
 <td>tests.ApplicationCoreLogicTest@18271936</td></tr>
 <tr>
-<td title='tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation()'><b>testAnnualForDirectInvocation</b><br>Test class: tests.ApplicationCoreLogicTest<br>Test method: Direct invocation of the app's own annualFor() JS function to prove R1/R2 case-insensitivity (or its absence) across every frequency, bypassing the Calculator dropdown's fixed-lowercase-value limitation.<br>Parameters: 100, monthly, monthly, Exact lowercase monthly</td>
+<td title='tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation()'><b>testAnnualForDirectInvocation</b><br>Test class: tests.ApplicationCoreLogicTest<br>Test method: annualFor() case-insensitivity check (R1/R2)<br>Parameters: 100, Weekly, weekly, Title-case Weekly</td>
 <td></td>
 <td>0</td>
 <td>tests.ApplicationCoreLogicTest@18271936</td></tr>
 <tr>
-<td title='tests.ApplicationCoreLogicTest.testUnsupportedFrequencyFallbackBehaviorIsDocumented()'><b>testUnsupportedFrequencyFallbackBehaviorIsDocumented</b><br>Test class: tests.ApplicationCoreLogicTest<br>Test method: Documents (does not assert spec compliance for) the app's fallback behavior for a completely unsupported frequency string</td>
+<td title='tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation()'><b>testAnnualForDirectInvocation</b><br>Test class: tests.ApplicationCoreLogicTest<br>Test method: annualFor() case-insensitivity check (R1/R2)<br>Parameters: 100, monthly, monthly, Exact lowercase monthly</td>
 <td></td>
 <td>0</td>
 <td>tests.ApplicationCoreLogicTest@18271936</td></tr>
 <tr>
-<td title='tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation()'><b>testAnnualForDirectInvocation</b><br>Test class: tests.ApplicationCoreLogicTest<br>Test method: Direct invocation of the app's own annualFor() JS function to prove R1/R2 case-insensitivity (or its absence) across every frequency, bypassing the Calculator dropdown's fixed-lowercase-value limitation.<br>Parameters: 100, weekly, weekly, Exact lowercase weekly</td>
+<td title='tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation()'><b>testAnnualForDirectInvocation</b><br>Test class: tests.ApplicationCoreLogicTest<br>Test method: annualFor() case-insensitivity check (R1/R2)<br>Parameters: 100, weekly, weekly, Exact lowercase weekly</td>
 <td></td>
 <td>0</td>
 <td>tests.ApplicationCoreLogicTest@18271936</td></tr>
 <tr>
-<td title='tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation()'><b>testAnnualForDirectInvocation</b><br>Test class: tests.ApplicationCoreLogicTest<br>Test method: Direct invocation of the app's own annualFor() JS function to prove R1/R2 case-insensitivity (or its absence) across every frequency, bypassing the Calculator dropdown's fixed-lowercase-value limitation.<br>Parameters: 100, Weekly, weekly, Title-case Weekly</td>
+<td title='tests.ApplicationCoreLogicTest.testUnsupportedFrequencyFallbackBehaviorIsDocumented()'><b>testUnsupportedFrequencyFallbackBehaviorIsDocumented</b><br>Test class: tests.ApplicationCoreLogicTest<br>Test method: Unsupported frequency fallback behavior (documented, not a defect assertion)</td>
 <td></td>
 <td>0</td>
 <td>tests.ApplicationCoreLogicTest@18271936</td></tr>
 <tr>
-<td title='tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation()'><b>testAnnualForDirectInvocation</b><br>Test class: tests.ApplicationCoreLogicTest<br>Test method: Direct invocation of the app's own annualFor() JS function to prove R1/R2 case-insensitivity (or its absence) across every frequency, bypassing the Calculator dropdown's fixed-lowercase-value limitation.<br>Parameters: 100, WEEKLY, weekly, Uppercase WEEKLY</td>
+<td title='tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation()'><b>testAnnualForDirectInvocation</b><br>Test class: tests.ApplicationCoreLogicTest<br>Test method: annualFor() case-insensitivity check (R1/R2)<br>Parameters: 100, annual, annual, Exact lowercase annual</td>
 <td></td>
 <td>0</td>
 <td>tests.ApplicationCoreLogicTest@18271936</td></tr>

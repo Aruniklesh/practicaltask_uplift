@@ -138,6 +138,25 @@ from the application's own displayed output.
   `HOW_TO_RUN.md`, `BUG_REPORTS.md`, and this report was taken directly from the actual
   `mvn clean test` output of this session, not estimated.
 
+## Post-submission fix: ExtentReports completeness and readability
+
+After the initial push, a review of the rendered `ExecutionReport.html` surfaced two issues,
+both fixed and re-verified (54 run / 38 passed / 16 failed afterward — unchanged, confirming
+no regression):
+
+1. **Verbose `@Test` descriptions and calculator test-data `description`/`ruleReference`
+   fields** (several were full paragraphs explaining audit rationale) were making the report
+   UI cramped and hard to scan. Shortened all of them to one-line labels; the full rationale
+   remains in Javadoc comments (not shown in the report) and in `BUG_REPORTS.md`/
+   `TEST_CASE_REVIEW.md`.
+2. **`CalculationUtilsBoundaryTest`'s 10 results never appeared in the ExtentReports HTML at
+   all** — a genuine completeness bug, not cosmetic. That class doesn't extend `BaseTest` (it
+   needs no browser), so it never inherited the `@Listeners(TestListener.class)` annotation
+   that populates the Extent report. It still ran and passed correctly (visible in the raw
+   Surefire XML and the `Tests run: 54` total), just invisible in the HTML dashboard. Fixed
+   by attaching `@Listeners(TestListener.class)` directly to the class. Confirmed present in
+   the report after the fix (its test names and descriptions now appear).
+
 ## Final verdict: submission readiness
 
 **Ready for client submission.** All housekeeping items from the previous version of this

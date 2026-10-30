@@ -49,7 +49,7 @@ public class CalculatorTest extends BaseTest {
      */
     @Test(
             dataProvider = "calculatorDataProvider",
-            description = "Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8"
+            description = "Calculator test (R1, R2, R3, R8)"
     )
     public void testAnnualContributionCalculator(CalculatorTestCase testCase) {
         System.out.println("================================================================================");
