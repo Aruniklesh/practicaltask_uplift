@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Contribution Portal Automation Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="Annual Contribution Calculator Tests(failed)" verbose="0">
+    <classes>
+      <class name="tests.CalculatorTest">
+        <methods>
+          <include name="setUpMethod"/>
+          <include name="tearDownClass"/>
+          <include name="setUpClass"/>
+          <include name="testAnnualContributionCalculator" invocation-numbers="1 20 21 11 13"/>
+        </methods>
+      </class> <!-- tests.CalculatorTest -->
+    </classes>
+  </test> <!-- Annual Contribution Calculator Tests(failed) -->
+  <test thread-count="5" name="Members Table Verification Tests(failed)" verbose="0">
+    <classes>
+      <class name="tests.MembersValidationTest">
+        <methods>
+          <include name="setUpMethod"/>
+          <include name="tearDownClass"/>
+          <include name="testMemberRowCalculations" invocation-numbers="1 3 6 7"/>
+          <include name="setUpClass"/>
+        </methods>
+      </class> <!-- tests.MembersValidationTest -->
+    </classes>
+  </test> <!-- Members Table Verification Tests(failed) -->
+  <test thread-count="5" name="Application Core Logic Tests (Direct JS Invocation - R1/R2 Case Variants)(failed)" verbose="0">
+    <classes>
+      <class name="tests.ApplicationCoreLogicTest">
+        <methods>
+          <include name="tearDownClass"/>
+          <include name="setUpMethod"/>
+          <include name="testAnnualForDirectInvocation" invocation-numbers="3 4 5 7 8 10 11"/>
+          <include name="setUpClass"/>
+        </methods>
+      </class> <!-- tests.ApplicationCoreLogicTest -->
+    </classes>
+  </test> <!-- Application Core Logic Tests (Direct JS Invocation - R1/R2 Case Variants)(failed) -->
+</suite> <!-- Failed suite [Contribution Portal Automation Suite] -->

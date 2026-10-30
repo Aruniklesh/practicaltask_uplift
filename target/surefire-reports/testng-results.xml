@@ -1,0 +1,1878 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="54" passed="38" failed="16" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-10-30T22:08:37 IST" name="Contribution Portal Automation Suite" finished-at="2026-10-30T22:09:01 IST" duration-ms="24382">
+    <groups>
+    </groups>
+    <test started-at="2026-10-30T22:08:37 IST" name="Annual Contribution Calculator Tests" finished-at="2026-10-30T22:08:52 IST" duration-ms="15538">
+      <class name="tests.CalculatorTest">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:37 IST" name="setUpClass" finished-at="2026-10-30T22:08:40 IST" duration-ms="3753" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:41 IST" name="setUpMethod" finished-at="2026-10-30T22:08:41 IST" duration-ms="130" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualContributionCalculator(models.CalculatorTestCase)[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:41 IST" name="testAnnualContributionCalculator" description="Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8" data-provider="calculatorDataProvider" finished-at="2026-10-30T22:08:42 IST" duration-ms="768" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TC01_WeeklyPayment] Standard calculation with Weekly payment frequency (Multiplier: 52) (Input: '10.00', Freq: 'weekly')]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualContributionCalculator -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:42 IST" name="setUpMethod" finished-at="2026-10-30T22:08:42 IST" duration-ms="66" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualContributionCalculator(models.CalculatorTestCase)[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:42 IST" name="testAnnualContributionCalculator" description="Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8" data-provider="calculatorDataProvider" finished-at="2026-10-30T22:08:43 IST" duration-ms="583" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TC02_FortnightlyPayment] Standard calculation with Fortnightly payment frequency (Multiplier: 26) (Input: '50.00', Freq: 'fortnightly')]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[[TC02_FortnightlyPayment] Calculation mismatch for amount='50.00', freq='fortnightly'. Rule Ref: R1: 50.00 * 26 = 1,300.00 (Note: Application defect uses 24) expected [Annual contribution: €1,300.00] but found [Annual contribution: €1,200.00]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: [TC02_FortnightlyPayment] Calculation mismatch for amount='50.00', freq='fortnightly'. Rule Ref: R1: 50.00 * 26 = 1,300.00 (Note: Application defect uses 24) expected [Annual contribution: €1,300.00] but found [Annual contribution: €1,200.00]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at tests.CalculatorTest.testAnnualContributionCalculator(CalculatorTest.java:93)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualContributionCalculator -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:43 IST" name="setUpMethod" finished-at="2026-10-30T22:08:43 IST" duration-ms="54" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualContributionCalculator(models.CalculatorTestCase)[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:43 IST" name="testAnnualContributionCalculator" description="Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8" data-provider="calculatorDataProvider" finished-at="2026-10-30T22:08:43 IST" duration-ms="552" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TC03_MonthlyPayment] Standard calculation with Monthly payment frequency (Multiplier: 12) (Input: '100.00', Freq: 'monthly')]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualContributionCalculator -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:43 IST" name="setUpMethod" finished-at="2026-10-30T22:08:43 IST" duration-ms="67" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualContributionCalculator(models.CalculatorTestCase)[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:43 IST" name="testAnnualContributionCalculator" description="Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8" data-provider="calculatorDataProvider" finished-at="2026-10-30T22:08:44 IST" duration-ms="565" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TC04_AnnualPayment] Standard calculation with Annual payment frequency (Multiplier: 1) (Input: '1200.00', Freq: 'annual')]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualContributionCalculator -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:44 IST" name="setUpMethod" finished-at="2026-10-30T22:08:44 IST" duration-ms="73" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualContributionCalculator(models.CalculatorTestCase)[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:44 IST" name="testAnnualContributionCalculator" description="Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8" data-provider="calculatorDataProvider" finished-at="2026-10-30T22:08:44 IST" duration-ms="448" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TC05_LowercaseFrequency] Payment frequency supplied in all lowercase letters (Input: '25.00', Freq: 'weekly')]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualContributionCalculator -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:44 IST" name="setUpMethod" finished-at="2026-10-30T22:08:45 IST" duration-ms="59" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualContributionCalculator(models.CalculatorTestCase)[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:45 IST" name="testAnnualContributionCalculator" description="Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8" data-provider="calculatorDataProvider" finished-at="2026-10-30T22:08:45 IST" duration-ms="610" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TC06_UppercaseFrequency] Payment frequency supplied in UPPERCASE letters to the test harness. NOTE: this does NOT genuinely exercise R2 case-insensitivity in the application. The calculator's <select> only ever submits a fixed lowercase value attribute regardless of which option's visible text is matched, so the real app never receives an uppercase frequency string here. This case only proves the Selenium POM can select the right dropdown option when given mixed-case test input. True R2 coverage for this app comes only from the Members table (see MembersValidationTest, member M004) where raw mixed-case strings reach the app's lookup logic directly, and from ApplicationCoreLogicTest which calls the app's own annualFor() function directly via JavaScript to bypass this UI constraint. (Input: '200.00', Freq: 'MONTHLY')]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualContributionCalculator -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:45 IST" name="setUpMethod" finished-at="2026-10-30T22:08:45 IST" duration-ms="42" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualContributionCalculator(models.CalculatorTestCase)[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:45 IST" name="testAnnualContributionCalculator" description="Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8" data-provider="calculatorDataProvider" finished-at="2026-10-30T22:08:45 IST" duration-ms="281" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TC07_ZeroAmount] Boundary value testing with Zero contribution amount (Input: '0', Freq: 'weekly')]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualContributionCalculator -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:45 IST" name="setUpMethod" finished-at="2026-10-30T22:08:46 IST" duration-ms="33" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualContributionCalculator(models.CalculatorTestCase)[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:46 IST" name="testAnnualContributionCalculator" description="Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8" data-provider="calculatorDataProvider" finished-at="2026-10-30T22:08:46 IST" duration-ms="354" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TC08_DecimalAmount] Calculation with fractional decimal contribution amount (Input: '75.50', Freq: 'monthly')]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualContributionCalculator -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:46 IST" name="setUpMethod" finished-at="2026-10-30T22:08:46 IST" duration-ms="29" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualContributionCalculator(models.CalculatorTestCase)[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:46 IST" name="testAnnualContributionCalculator" description="Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8" data-provider="calculatorDataProvider" finished-at="2026-10-30T22:08:46 IST" duration-ms="474" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TC09_LargeAmount] Boundary testing with large monetary contribution amount verifying comma formatting (Input: '10000.00', Freq: 'monthly')]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualContributionCalculator -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:46 IST" name="setUpMethod" finished-at="2026-10-30T22:08:46 IST" duration-ms="44" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualContributionCalculator(models.CalculatorTestCase)[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:46 IST" name="testAnnualContributionCalculator" description="Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8" data-provider="calculatorDataProvider" finished-at="2026-10-30T22:08:47 IST" duration-ms="357" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TC10_BlankAmount] Validation test for blank / empty contribution amount input (Input: '', Freq: 'monthly')]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualContributionCalculator -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:47 IST" name="setUpMethod" finished-at="2026-10-30T22:08:47 IST" duration-ms="34" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualContributionCalculator(models.CalculatorTestCase)[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:47 IST" name="testAnnualContributionCalculator" description="Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8" data-provider="calculatorDataProvider" finished-at="2026-10-30T22:08:47 IST" duration-ms="327" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TC11_AlphabeticInput] Validation test for non-numeric alphabetic input string (Input: 'abc', Freq: 'weekly')]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualContributionCalculator -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:47 IST" name="setUpMethod" finished-at="2026-10-30T22:08:47 IST" duration-ms="51" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualContributionCalculator(models.CalculatorTestCase)[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:47 IST" name="testAnnualContributionCalculator" description="Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8" data-provider="calculatorDataProvider" finished-at="2026-10-30T22:08:48 IST" duration-ms="361" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TC12_NegativeAmount] Validation test for negative contribution amount (Input: '-50.00', Freq: 'monthly')]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[[TC12_NegativeAmount] Validation error mismatch for amount='-50.00'. Rule Ref: R8: Negative amount must show 'Amount cannot be negative' (Note: App defect fails to validate) expected [Amount cannot be negative] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: [TC12_NegativeAmount] Validation error mismatch for amount='-50.00'. Rule Ref: R8: Negative amount must show 'Amount cannot be negative' (Note: App defect fails to validate) expected [Amount cannot be negative] but found []
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at tests.CalculatorTest.testAnnualContributionCalculator(CalculatorTest.java:121)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualContributionCalculator -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:48 IST" name="setUpMethod" finished-at="2026-10-30T22:08:48 IST" duration-ms="39" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualContributionCalculator(models.CalculatorTestCase)[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:48 IST" name="testAnnualContributionCalculator" description="Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8" data-provider="calculatorDataProvider" finished-at="2026-10-30T22:08:48 IST" duration-ms="362" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TC13_WhitespaceAmount] Validation test for whitespace only amount (Input: '   ', Freq: 'annual')]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualContributionCalculator -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:48 IST" name="setUpMethod" finished-at="2026-10-30T22:08:48 IST" duration-ms="41" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualContributionCalculator(models.CalculatorTestCase)[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:48 IST" name="testAnnualContributionCalculator" description="Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8" data-provider="calculatorDataProvider" finished-at="2026-10-30T22:08:48 IST" duration-ms="263" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TC14_NegativeDecimalAmount] Validation test for negative fractional decimal amount (Input: '-10.50', Freq: 'weekly')]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[[TC14_NegativeDecimalAmount] Validation error mismatch for amount='-10.50'. Rule Ref: R8: Negative decimal must show 'Amount cannot be negative' expected [Amount cannot be negative] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: [TC14_NegativeDecimalAmount] Validation error mismatch for amount='-10.50'. Rule Ref: R8: Negative decimal must show 'Amount cannot be negative' expected [Amount cannot be negative] but found []
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at tests.CalculatorTest.testAnnualContributionCalculator(CalculatorTest.java:121)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualContributionCalculator -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:48 IST" name="setUpMethod" finished-at="2026-10-30T22:08:48 IST" duration-ms="32" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualContributionCalculator(models.CalculatorTestCase)[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:48 IST" name="testAnnualContributionCalculator" description="Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8" data-provider="calculatorDataProvider" finished-at="2026-10-30T22:08:49 IST" duration-ms="350" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TC15_TrailingDecimalPoint] Amount with a trailing decimal point and no fractional digits (Input: '5.', Freq: 'weekly')]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualContributionCalculator -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:49 IST" name="setUpMethod" finished-at="2026-10-30T22:08:49 IST" duration-ms="41" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualContributionCalculator(models.CalculatorTestCase)[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:49 IST" name="testAnnualContributionCalculator" description="Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8" data-provider="calculatorDataProvider" finished-at="2026-10-30T22:08:49 IST" duration-ms="306" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TC16_LeadingPlusSign] Amount with an explicit leading plus sign (Input: '+25', Freq: 'monthly')]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualContributionCalculator -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:49 IST" name="setUpMethod" finished-at="2026-10-30T22:08:49 IST" duration-ms="34" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualContributionCalculator(models.CalculatorTestCase)[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:49 IST" name="testAnnualContributionCalculator" description="Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8" data-provider="calculatorDataProvider" finished-at="2026-10-30T22:08:50 IST" duration-ms="381" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TC17_ScientificNotation] Amount expressed in scientific notation (Input: '1e3', Freq: 'monthly')]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualContributionCalculator -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:50 IST" name="setUpMethod" finished-at="2026-10-30T22:08:50 IST" duration-ms="34" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualContributionCalculator(models.CalculatorTestCase)[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:50 IST" name="testAnnualContributionCalculator" description="Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8" data-provider="calculatorDataProvider" finished-at="2026-10-30T22:08:50 IST" duration-ms="359" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TC18_LeadingZeros] Amount with leading zeros (Input: '007', Freq: 'annual')]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualContributionCalculator -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:50 IST" name="setUpMethod" finished-at="2026-10-30T22:08:50 IST" duration-ms="35" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualContributionCalculator(models.CalculatorTestCase)[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:50 IST" name="testAnnualContributionCalculator" description="Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8" data-provider="calculatorDataProvider" finished-at="2026-10-30T22:08:50 IST" duration-ms="350" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TC19_CommaFormattedAmountRejected] Amount using thousands-separator comma formatting, which is not a valid numeric literal (Input: '5,000', Freq: 'monthly')]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualContributionCalculator -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:50 IST" name="setUpMethod" finished-at="2026-10-30T22:08:50 IST" duration-ms="57" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualContributionCalculator(models.CalculatorTestCase)[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:50 IST" name="testAnnualContributionCalculator" description="Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8" data-provider="calculatorDataProvider" finished-at="2026-10-30T22:08:51 IST" duration-ms="429" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TC20_MultipleDecimalPointsRejected] Amount with two decimal points, which is not a valid numeric literal (Input: '5..5', Freq: 'weekly')]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualContributionCalculator -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:51 IST" name="setUpMethod" finished-at="2026-10-30T22:08:51 IST" duration-ms="53" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualContributionCalculator(models.CalculatorTestCase)[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:51 IST" name="testAnnualContributionCalculator" description="Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8" data-provider="calculatorDataProvider" finished-at="2026-10-30T22:08:51 IST" duration-ms="478" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TC21_HexNotationAmount_AmbiguousEdgeCase] Amount expressed as a hexadecimal literal. JS Number('0x10') parses this to 16 (not NaN), so the app's isNaN-based check does not reject it, while Java's BigDecimal does not support hex notation and throws. This test documents a genuine app-vs-spec mismatch (see BUG_REPORTS.md Finding F1) rather than asserting a fabricated requirement. (Input: '0x10', Freq: 'weekly')]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[[TC21_HexNotationAmount_AmbiguousEdgeCase] Validation error mismatch for amount='0x10'. Rule Ref: R8 (ambiguous): a hex literal is not a normal monetary numeric input; see BUG_REPORTS.md Finding F1 for the full analysis of this expected FAIL. expected [Enter a valid amount] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: [TC21_HexNotationAmount_AmbiguousEdgeCase] Validation error mismatch for amount='0x10'. Rule Ref: R8 (ambiguous): a hex literal is not a normal monetary numeric input; see BUG_REPORTS.md Finding F1 for the full analysis of this expected FAIL. expected [Enter a valid amount] but found []
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at tests.CalculatorTest.testAnnualContributionCalculator(CalculatorTest.java:121)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualContributionCalculator -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:51 IST" name="setUpMethod" finished-at="2026-10-30T22:08:51 IST" duration-ms="51" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualContributionCalculator(models.CalculatorTestCase)[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:51 IST" name="testAnnualContributionCalculator" description="Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8" data-provider="calculatorDataProvider" finished-at="2026-10-30T22:08:52 IST" duration-ms="281" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TC22_InfinityAmount_AmbiguousEdgeCase] Amount literally 'Infinity'. JS Number('Infinity') is a valid, non-NaN number, so the app's isNaN-based check accepts it and renders 'Annual contribution: €∞' instead of an error. This test documents a genuine app-vs-spec mismatch (see BUG_REPORTS.md Finding F2) rather than asserting a fabricated requirement. (Input: 'Infinity', Freq: 'weekly')]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[[TC22_InfinityAmount_AmbiguousEdgeCase] Validation error mismatch for amount='Infinity'. Rule Ref: R8 (ambiguous): see BUG_REPORTS.md Finding F2 for the full analysis of this expected FAIL. expected [Enter a valid amount] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: [TC22_InfinityAmount_AmbiguousEdgeCase] Validation error mismatch for amount='Infinity'. Rule Ref: R8 (ambiguous): see BUG_REPORTS.md Finding F2 for the full analysis of this expected FAIL. expected [Enter a valid amount] but found []
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at tests.CalculatorTest.testAnnualContributionCalculator(CalculatorTest.java:121)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualContributionCalculator -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:tests.CalculatorTest@2f7c2f4f]" started-at="2026-10-30T22:08:52 IST" name="tearDownClass" finished-at="2026-10-30T22:08:52 IST" duration-ms="220" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- tests.CalculatorTest -->
+    </test> <!-- Annual Contribution Calculator Tests -->
+    <test started-at="2026-10-30T22:08:53 IST" name="Members Table Verification Tests" finished-at="2026-10-30T22:08:57 IST" duration-ms="4680">
+      <class name="tests.MembersValidationTest">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:tests.MembersValidationTest@4c60d6e9]" started-at="2026-10-30T22:08:53 IST" name="setUpClass" finished-at="2026-10-30T22:08:53 IST" duration-ms="640" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.MembersValidationTest@4c60d6e9]" started-at="2026-10-30T22:08:53 IST" name="setUpMethod" finished-at="2026-10-30T22:08:53 IST" duration-ms="90" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testMemberRowCalculations(models.Member)[pri:0, instance:tests.MembersValidationTest@4c60d6e9]" started-at="2026-10-30T22:08:53 IST" name="testMemberRowCalculations" description="Validates on-screen member values against independent calculations from data/members.json" data-provider="membersDataProvider" finished-at="2026-10-30T22:08:54 IST" duration-ms="383" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Member{memberId='M001', name='Aoife Byrne', frequency='weekly', contributionAmount=10, unitsHeld=152.4381925, unitPrice=3.4567, nextOrderUnits=1.2345678}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMemberRowCalculations -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.MembersValidationTest@4c60d6e9]" started-at="2026-10-30T22:08:54 IST" name="setUpMethod" finished-at="2026-10-30T22:08:54 IST" duration-ms="42" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testMemberRowCalculations(models.Member)[pri:0, instance:tests.MembersValidationTest@4c60d6e9]" started-at="2026-10-30T22:08:54 IST" name="testMemberRowCalculations" description="Validates on-screen member values against independent calculations from data/members.json" data-provider="membersDataProvider" finished-at="2026-10-30T22:08:54 IST" duration-ms="581" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Member{memberId='M002', name='Liam Walsh', frequency='fortnightly', contributionAmount=50, unitsHeld=980.1234567, unitPrice=2.1189, nextOrderUnits=4.5}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+
+Member ID: M002
+Field: Annual Contribution
+Expected: €1,300.00
+Actual: €1,200.00
+Status: FAILED
+Business Rule: R1 / R2
+ expected [€1,300.00] but found [€1,200.00]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+
+Member ID: M002
+Field: Annual Contribution
+Expected: €1,300.00
+Actual: €1,200.00
+Status: FAILED
+Business Rule: R1 / R2
+ expected [€1,300.00] but found [€1,200.00]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+at tests.MembersValidationTest.testMemberRowCalculations(MembersValidationTest.java:255)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMemberRowCalculations -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.MembersValidationTest@4c60d6e9]" started-at="2026-10-30T22:08:54 IST" name="setUpMethod" finished-at="2026-10-30T22:08:54 IST" duration-ms="63" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testMemberRowCalculations(models.Member)[pri:0, instance:tests.MembersValidationTest@4c60d6e9]" started-at="2026-10-30T22:08:54 IST" name="testMemberRowCalculations" description="Validates on-screen member values against independent calculations from data/members.json" data-provider="membersDataProvider" finished-at="2026-10-30T22:08:55 IST" duration-ms="478" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Member{memberId='M003', name='Siobhan Kelly', frequency='monthly', contributionAmount=200, unitsHeld=2450.75, unitPrice=1.9874, nextOrderUnits=12.0004}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMemberRowCalculations -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.MembersValidationTest@4c60d6e9]" started-at="2026-10-30T22:08:55 IST" name="setUpMethod" finished-at="2026-10-30T22:08:55 IST" duration-ms="50" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testMemberRowCalculations(models.Member)[pri:0, instance:tests.MembersValidationTest@4c60d6e9]" started-at="2026-10-30T22:08:55 IST" name="testMemberRowCalculations" description="Validates on-screen member values against independent calculations from data/members.json" data-provider="membersDataProvider" finished-at="2026-10-30T22:08:55 IST" duration-ms="455" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Member{memberId='M004', name='Conor Doyle', frequency='Monthly', contributionAmount=150, unitsHeld=610.0000001, unitPrice=4.0021, nextOrderUnits=3.25}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+
+Member ID: M004
+Field: Annual Contribution
+Expected: €1,800.00
+Actual: €7,800.00
+Status: FAILED
+Business Rule: R1 / R2
+ expected [€1,800.00] but found [€7,800.00]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+
+Member ID: M004
+Field: Annual Contribution
+Expected: €1,800.00
+Actual: €7,800.00
+Status: FAILED
+Business Rule: R1 / R2
+ expected [€1,800.00] but found [€7,800.00]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+at tests.MembersValidationTest.testMemberRowCalculations(MembersValidationTest.java:255)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMemberRowCalculations -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.MembersValidationTest@4c60d6e9]" started-at="2026-10-30T22:08:56 IST" name="setUpMethod" finished-at="2026-10-30T22:08:56 IST" duration-ms="43" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testMemberRowCalculations(models.Member)[pri:0, instance:tests.MembersValidationTest@4c60d6e9]" started-at="2026-10-30T22:08:56 IST" name="testMemberRowCalculations" description="Validates on-screen member values against independent calculations from data/members.json" data-provider="membersDataProvider" finished-at="2026-10-30T22:08:56 IST" duration-ms="265" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Member{memberId='M005', name='Niamh Ryan', frequency='annual', contributionAmount=1200, unitsHeld=75.9876543, unitPrice=15.2, nextOrderUnits=0.75}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMemberRowCalculations -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.MembersValidationTest@4c60d6e9]" started-at="2026-10-30T22:08:56 IST" name="setUpMethod" finished-at="2026-10-30T22:08:56 IST" duration-ms="32" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testMemberRowCalculations(models.Member)[pri:0, instance:tests.MembersValidationTest@4c60d6e9]" started-at="2026-10-30T22:08:56 IST" name="testMemberRowCalculations" description="Validates on-screen member values against independent calculations from data/members.json" data-provider="membersDataProvider" finished-at="2026-10-30T22:08:56 IST" duration-ms="276" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Member{memberId='M006', name='Sean Murphy', frequency='weekly', contributionAmount=0, unitsHeld=0, unitPrice=3.4567, nextOrderUnits=0}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMemberRowCalculations -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.MembersValidationTest@4c60d6e9]" started-at="2026-10-30T22:08:56 IST" name="setUpMethod" finished-at="2026-10-30T22:08:56 IST" duration-ms="38" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testMemberRowCalculations(models.Member)[pri:0, instance:tests.MembersValidationTest@4c60d6e9]" started-at="2026-10-30T22:08:56 IST" name="testMemberRowCalculations" description="Validates on-screen member values against independent calculations from data/members.json" data-provider="membersDataProvider" finished-at="2026-10-30T22:08:56 IST" duration-ms="284" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Member{memberId='M007', name='Ciara Nolan', frequency='monthly', contributionAmount=75.5, unitsHeld=333.3333333, unitPrice=2.75, nextOrderUnits=0.00004}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+
+Member ID: M007
+Field: Order Status
+Expected: Blocked
+Actual: Ready
+Status: FAILED
+Business Rule: R7
+ expected [Blocked] but found [Ready]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+
+Member ID: M007
+Field: Order Status
+Expected: Blocked
+Actual: Ready
+Status: FAILED
+Business Rule: R7
+ expected [Blocked] but found [Ready]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+at tests.MembersValidationTest.testMemberRowCalculations(MembersValidationTest.java:255)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMemberRowCalculations -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.MembersValidationTest@4c60d6e9]" started-at="2026-10-30T22:08:57 IST" name="setUpMethod" finished-at="2026-10-30T22:08:57 IST" duration-ms="32" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testMemberRowCalculations(models.Member)[pri:0, instance:tests.MembersValidationTest@4c60d6e9]" started-at="2026-10-30T22:08:57 IST" name="testMemberRowCalculations" description="Validates on-screen member values against independent calculations from data/members.json" data-provider="membersDataProvider" finished-at="2026-10-30T22:08:57 IST" duration-ms="293" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Member{memberId='M008', name='Darragh Quinn', frequency='fortnightly', contributionAmount=25, unitsHeld=1.0000005, unitPrice=9.9999, nextOrderUnits=0.00006}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+
+Member ID: M008
+Field: Annual Contribution
+Expected: €650.00
+Actual: €600.00
+Status: FAILED
+Business Rule: R1 / R2
+ expected [€650.00] but found [€600.00]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+
+Member ID: M008
+Field: Annual Contribution
+Expected: €650.00
+Actual: €600.00
+Status: FAILED
+Business Rule: R1 / R2
+ expected [€650.00] but found [€600.00]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+at tests.MembersValidationTest.testMemberRowCalculations(MembersValidationTest.java:255)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMemberRowCalculations -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.MembersValidationTest@4c60d6e9]" started-at="2026-10-30T22:08:57 IST" name="setUpMethod" finished-at="2026-10-30T22:08:57 IST" duration-ms="36" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testMembersTableIntegrity()[pri:0, instance:tests.MembersValidationTest@4c60d6e9]" started-at="2026-10-30T22:08:57 IST" name="testMembersTableIntegrity" description="Verifies the rendered Members table has exactly one row per JSON member, with no missing or duplicate data-member-id values" finished-at="2026-10-30T22:08:57 IST" duration-ms="130" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMembersTableIntegrity -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:tests.MembersValidationTest@4c60d6e9]" started-at="2026-10-30T22:08:57 IST" name="tearDownClass" finished-at="2026-10-30T22:08:57 IST" duration-ms="187" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- tests.MembersValidationTest -->
+    </test> <!-- Members Table Verification Tests -->
+    <test started-at="2026-10-30T22:08:57 IST" name="Application Core Logic Tests (Direct JS Invocation - R1/R2 Case Variants)" finished-at="2026-10-30T22:09:01 IST" duration-ms="3398">
+      <class name="tests.ApplicationCoreLogicTest">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:tests.ApplicationCoreLogicTest@18271936]" started-at="2026-10-30T22:08:57 IST" name="setUpClass" finished-at="2026-10-30T22:08:58 IST" duration-ms="735" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.ApplicationCoreLogicTest@18271936]" started-at="2026-10-30T22:08:58 IST" name="setUpMethod" finished-at="2026-10-30T22:08:58 IST" duration-ms="111" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualForDirectInvocation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.ApplicationCoreLogicTest@18271936]" started-at="2026-10-30T22:08:58 IST" name="testAnnualForDirectInvocation" description="Direct invocation of the app&#039;s own annualFor() JS function to prove R1/R2 case-insensitivity (or its absence) across every frequency, bypassing the Calculator dropdown&#039;s fixed-lowercase-value limitation." data-provider="frequencyCaseVariants" finished-at="2026-10-30T22:08:58 IST" duration-ms="69" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[weekly]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[weekly]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Exact lowercase weekly]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualForDirectInvocation -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.ApplicationCoreLogicTest@18271936]" started-at="2026-10-30T22:08:58 IST" name="setUpMethod" finished-at="2026-10-30T22:08:58 IST" duration-ms="44" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualForDirectInvocation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.ApplicationCoreLogicTest@18271936]" started-at="2026-10-30T22:08:58 IST" name="testAnnualForDirectInvocation" description="Direct invocation of the app&#039;s own annualFor() JS function to prove R1/R2 case-insensitivity (or its absence) across every frequency, bypassing the Calculator dropdown&#039;s fixed-lowercase-value limitation." data-provider="frequencyCaseVariants" finished-at="2026-10-30T22:08:58 IST" duration-ms="78" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Weekly]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[weekly]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Title-case Weekly]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualForDirectInvocation -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.ApplicationCoreLogicTest@18271936]" started-at="2026-10-30T22:08:58 IST" name="setUpMethod" finished-at="2026-10-30T22:08:58 IST" duration-ms="28" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualForDirectInvocation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.ApplicationCoreLogicTest@18271936]" started-at="2026-10-30T22:08:58 IST" name="testAnnualForDirectInvocation" description="Direct invocation of the app&#039;s own annualFor() JS function to prove R1/R2 case-insensitivity (or its absence) across every frequency, bypassing the Calculator dropdown&#039;s fixed-lowercase-value limitation." data-provider="frequencyCaseVariants" finished-at="2026-10-30T22:08:59 IST" duration-ms="153" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[WEEKLY]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[weekly]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Uppercase WEEKLY]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualForDirectInvocation -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.ApplicationCoreLogicTest@18271936]" started-at="2026-10-30T22:08:59 IST" name="setUpMethod" finished-at="2026-10-30T22:08:59 IST" duration-ms="41" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualForDirectInvocation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.ApplicationCoreLogicTest@18271936]" started-at="2026-10-30T22:08:59 IST" name="testAnnualForDirectInvocation" description="Direct invocation of the app&#039;s own annualFor() JS function to prove R1/R2 case-insensitivity (or its absence) across every frequency, bypassing the Calculator dropdown&#039;s fixed-lowercase-value limitation." data-provider="frequencyCaseVariants" finished-at="2026-10-30T22:08:59 IST" duration-ms="55" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[fortnightly]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[fortnightly]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Exact lowercase fortnightly]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[annualFor(100, 'fortnightly') [Exact lowercase fortnightly] -> expected 2600.00 per R1/R2 but app's real annualFor() returned 2400.0. Rule Reference: R1/R2. expected [2600.00] but found [2400.00]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: annualFor(100, 'fortnightly') [Exact lowercase fortnightly] -> expected 2600.00 per R1/R2 but app's real annualFor() returned 2400.0. Rule Reference: R1/R2. expected [2600.00] but found [2400.00]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation(ApplicationCoreLogicTest.java:93)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualForDirectInvocation -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.ApplicationCoreLogicTest@18271936]" started-at="2026-10-30T22:08:59 IST" name="setUpMethod" finished-at="2026-10-30T22:08:59 IST" duration-ms="38" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualForDirectInvocation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.ApplicationCoreLogicTest@18271936]" started-at="2026-10-30T22:08:59 IST" name="testAnnualForDirectInvocation" description="Direct invocation of the app&#039;s own annualFor() JS function to prove R1/R2 case-insensitivity (or its absence) across every frequency, bypassing the Calculator dropdown&#039;s fixed-lowercase-value limitation." data-provider="frequencyCaseVariants" finished-at="2026-10-30T22:08:59 IST" duration-ms="48" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Fortnightly]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[fortnightly]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Title-case Fortnightly]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[annualFor(100, 'Fortnightly') [Title-case Fortnightly] -> expected 2600.00 per R1/R2 but app's real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [2600.00] but found [5200.00]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: annualFor(100, 'Fortnightly') [Title-case Fortnightly] -> expected 2600.00 per R1/R2 but app's real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [2600.00] but found [5200.00]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation(ApplicationCoreLogicTest.java:93)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualForDirectInvocation -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.ApplicationCoreLogicTest@18271936]" started-at="2026-10-30T22:08:59 IST" name="setUpMethod" finished-at="2026-10-30T22:08:59 IST" duration-ms="53" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualForDirectInvocation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.ApplicationCoreLogicTest@18271936]" started-at="2026-10-30T22:08:59 IST" name="testAnnualForDirectInvocation" description="Direct invocation of the app&#039;s own annualFor() JS function to prove R1/R2 case-insensitivity (or its absence) across every frequency, bypassing the Calculator dropdown&#039;s fixed-lowercase-value limitation." data-provider="frequencyCaseVariants" finished-at="2026-10-30T22:08:59 IST" duration-ms="60" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[FORTNIGHTLY]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[fortnightly]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Uppercase FORTNIGHTLY]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[annualFor(100, 'FORTNIGHTLY') [Uppercase FORTNIGHTLY] -> expected 2600.00 per R1/R2 but app's real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [2600.00] but found [5200.00]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: annualFor(100, 'FORTNIGHTLY') [Uppercase FORTNIGHTLY] -> expected 2600.00 per R1/R2 but app's real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [2600.00] but found [5200.00]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation(ApplicationCoreLogicTest.java:93)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualForDirectInvocation -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.ApplicationCoreLogicTest@18271936]" started-at="2026-10-30T22:08:59 IST" name="setUpMethod" finished-at="2026-10-30T22:08:59 IST" duration-ms="80" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualForDirectInvocation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.ApplicationCoreLogicTest@18271936]" started-at="2026-10-30T22:08:59 IST" name="testAnnualForDirectInvocation" description="Direct invocation of the app&#039;s own annualFor() JS function to prove R1/R2 case-insensitivity (or its absence) across every frequency, bypassing the Calculator dropdown&#039;s fixed-lowercase-value limitation." data-provider="frequencyCaseVariants" finished-at="2026-10-30T22:08:59 IST" duration-ms="101" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[monthly]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[monthly]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Exact lowercase monthly]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualForDirectInvocation -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.ApplicationCoreLogicTest@18271936]" started-at="2026-10-30T22:08:59 IST" name="setUpMethod" finished-at="2026-10-30T22:08:59 IST" duration-ms="84" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualForDirectInvocation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.ApplicationCoreLogicTest@18271936]" started-at="2026-10-30T22:08:59 IST" name="testAnnualForDirectInvocation" description="Direct invocation of the app&#039;s own annualFor() JS function to prove R1/R2 case-insensitivity (or its absence) across every frequency, bypassing the Calculator dropdown&#039;s fixed-lowercase-value limitation." data-provider="frequencyCaseVariants" finished-at="2026-10-30T22:09:00 IST" duration-ms="97" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Monthly]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[monthly]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Title-case Monthly (same form as defect M004)]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[annualFor(100, 'Monthly') [Title-case Monthly (same form as defect M004)] -> expected 1200.00 per R1/R2 but app's real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [1200.00] but found [5200.00]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: annualFor(100, 'Monthly') [Title-case Monthly (same form as defect M004)] -> expected 1200.00 per R1/R2 but app's real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [1200.00] but found [5200.00]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation(ApplicationCoreLogicTest.java:93)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualForDirectInvocation -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.ApplicationCoreLogicTest@18271936]" started-at="2026-10-30T22:09:00 IST" name="setUpMethod" finished-at="2026-10-30T22:09:00 IST" duration-ms="80" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualForDirectInvocation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.ApplicationCoreLogicTest@18271936]" started-at="2026-10-30T22:09:00 IST" name="testAnnualForDirectInvocation" description="Direct invocation of the app&#039;s own annualFor() JS function to prove R1/R2 case-insensitivity (or its absence) across every frequency, bypassing the Calculator dropdown&#039;s fixed-lowercase-value limitation." data-provider="frequencyCaseVariants" finished-at="2026-10-30T22:09:00 IST" duration-ms="88" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[MONTHLY]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[monthly]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Uppercase MONTHLY]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[annualFor(100, 'MONTHLY') [Uppercase MONTHLY] -> expected 1200.00 per R1/R2 but app's real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [1200.00] but found [5200.00]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: annualFor(100, 'MONTHLY') [Uppercase MONTHLY] -> expected 1200.00 per R1/R2 but app's real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [1200.00] but found [5200.00]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation(ApplicationCoreLogicTest.java:93)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualForDirectInvocation -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.ApplicationCoreLogicTest@18271936]" started-at="2026-10-30T22:09:00 IST" name="setUpMethod" finished-at="2026-10-30T22:09:00 IST" duration-ms="54" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualForDirectInvocation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.ApplicationCoreLogicTest@18271936]" started-at="2026-10-30T22:09:00 IST" name="testAnnualForDirectInvocation" description="Direct invocation of the app&#039;s own annualFor() JS function to prove R1/R2 case-insensitivity (or its absence) across every frequency, bypassing the Calculator dropdown&#039;s fixed-lowercase-value limitation." data-provider="frequencyCaseVariants" finished-at="2026-10-30T22:09:00 IST" duration-ms="69" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[annual]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[annual]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Exact lowercase annual]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualForDirectInvocation -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.ApplicationCoreLogicTest@18271936]" started-at="2026-10-30T22:09:00 IST" name="setUpMethod" finished-at="2026-10-30T22:09:00 IST" duration-ms="35" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualForDirectInvocation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.ApplicationCoreLogicTest@18271936]" started-at="2026-10-30T22:09:00 IST" name="testAnnualForDirectInvocation" description="Direct invocation of the app&#039;s own annualFor() JS function to prove R1/R2 case-insensitivity (or its absence) across every frequency, bypassing the Calculator dropdown&#039;s fixed-lowercase-value limitation." data-provider="frequencyCaseVariants" finished-at="2026-10-30T22:09:00 IST" duration-ms="53" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Annual]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[annual]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Title-case Annual]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[annualFor(100, 'Annual') [Title-case Annual] -> expected 100.00 per R1/R2 but app's real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [100.00] but found [5200.00]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: annualFor(100, 'Annual') [Title-case Annual] -> expected 100.00 per R1/R2 but app's real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [100.00] but found [5200.00]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation(ApplicationCoreLogicTest.java:93)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualForDirectInvocation -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.ApplicationCoreLogicTest@18271936]" started-at="2026-10-30T22:09:00 IST" name="setUpMethod" finished-at="2026-10-30T22:09:00 IST" duration-ms="46" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testAnnualForDirectInvocation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.ApplicationCoreLogicTest@18271936]" started-at="2026-10-30T22:09:00 IST" name="testAnnualForDirectInvocation" description="Direct invocation of the app&#039;s own annualFor() JS function to prove R1/R2 case-insensitivity (or its absence) across every frequency, bypassing the Calculator dropdown&#039;s fixed-lowercase-value limitation." data-provider="frequencyCaseVariants" finished-at="2026-10-30T22:09:00 IST" duration-ms="55" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ANNUAL]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[annual]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Uppercase ANNUAL]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[annualFor(100, 'ANNUAL') [Uppercase ANNUAL] -> expected 100.00 per R1/R2 but app's real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [100.00] but found [5200.00]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: annualFor(100, 'ANNUAL') [Uppercase ANNUAL] -> expected 100.00 per R1/R2 but app's real annualFor() returned 5200.0. Rule Reference: R1/R2. expected [100.00] but found [5200.00]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at tests.ApplicationCoreLogicTest.testAnnualForDirectInvocation(ApplicationCoreLogicTest.java:93)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAnnualForDirectInvocation -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.ApplicationCoreLogicTest@18271936]" started-at="2026-10-30T22:09:00 IST" name="setUpMethod" finished-at="2026-10-30T22:09:00 IST" duration-ms="76" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="testUnsupportedFrequencyFallbackBehaviorIsDocumented()[pri:0, instance:tests.ApplicationCoreLogicTest@18271936]" started-at="2026-10-30T22:09:00 IST" name="testUnsupportedFrequencyFallbackBehaviorIsDocumented" description="Documents (does not assert spec compliance for) the app&#039;s fallback behavior for a completely unsupported frequency string" finished-at="2026-10-30T22:09:01 IST" duration-ms="100" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUnsupportedFrequencyFallbackBehaviorIsDocumented -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:tests.ApplicationCoreLogicTest@18271936]" started-at="2026-10-30T22:09:01 IST" name="tearDownClass" finished-at="2026-10-30T22:09:01 IST" duration-ms="248" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- tests.ApplicationCoreLogicTest -->
+    </test> <!-- Application Core Logic Tests (Direct JS Invocation - R1/R2 Case Variants) -->
+    <test started-at="2026-10-30T22:09:01 IST" name="Calculation Utils Boundary Tests (R6/R7 Rounding, Utility-Level Only)" finished-at="2026-10-30T22:09:01 IST" duration-ms="33">
+      <class name="tests.CalculationUtilsBoundaryTest">
+        <test-method signature="testFundValueRoundingAtHalfUpBoundary()[pri:0, instance:tests.CalculationUtilsBoundaryTest@2cb4893b]" started-at="2026-10-30T22:09:01 IST" name="testFundValueRoundingAtHalfUpBoundary" description="Confirms the documented HALF_UP rounding baseline for Fund Value (R5) at a classic floating-point rounding trap value (2.005), at the utility level." finished-at="2026-10-30T22:09:01 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFundValueRoundingAtHalfUpBoundary -->
+        <test-method signature="testOrderUnitsRoundingAndStatusBoundary(double,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.CalculationUtilsBoundaryTest@2cb4893b]" started-at="2026-10-30T22:09:01 IST" name="testOrderUnitsRoundingAndStatusBoundary" description="Verifies CalculationUtils rounding (R6) and status derivation (R7) at boundary values absent from the client fixture data. Utility-level only; see class-level javadoc for scope." data-provider="orderUnitsBoundaries" finished-at="2026-10-30T22:09:01 IST" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1.0E-5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0.0000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Blocked]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Rounds down to exactly zero]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOrderUnitsRoundingAndStatusBoundary -->
+        <test-method signature="testOrderUnitsRoundingAndStatusBoundary(double,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.CalculationUtilsBoundaryTest@2cb4893b]" started-at="2026-10-30T22:09:01 IST" name="testOrderUnitsRoundingAndStatusBoundary" description="Verifies CalculationUtils rounding (R6) and status derivation (R7) at boundary values absent from the client fixture data. Utility-level only; see class-level javadoc for scope." data-provider="orderUnitsBoundaries" finished-at="2026-10-30T22:09:01 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4.0E-5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0.0000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Blocked]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Same raw value as member M007 (regression guard)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOrderUnitsRoundingAndStatusBoundary -->
+        <test-method signature="testOrderUnitsRoundingAndStatusBoundary(double,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.CalculationUtilsBoundaryTest@2cb4893b]" started-at="2026-10-30T22:09:01 IST" name="testOrderUnitsRoundingAndStatusBoundary" description="Verifies CalculationUtils rounding (R6) and status derivation (R7) at boundary values absent from the client fixture data. Utility-level only; see class-level javadoc for scope." data-provider="orderUnitsBoundaries" finished-at="2026-10-30T22:09:01 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[6.0E-5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0.0001]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Ready]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Same raw value as member M008 (regression guard)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOrderUnitsRoundingAndStatusBoundary -->
+        <test-method signature="testOrderUnitsRoundingAndStatusBoundary(double,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.CalculationUtilsBoundaryTest@2cb4893b]" started-at="2026-10-30T22:09:01 IST" name="testOrderUnitsRoundingAndStatusBoundary" description="Verifies CalculationUtils rounding (R6) and status derivation (R7) at boundary values absent from the client fixture data. Utility-level only; see class-level javadoc for scope." data-provider="orderUnitsBoundaries" finished-at="2026-10-30T22:09:01 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4.49E-4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0.0004]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Ready]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Just below the 0.0004/0.0005 boundary]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOrderUnitsRoundingAndStatusBoundary -->
+        <test-method signature="testOrderUnitsRoundingAndStatusBoundary(double,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.CalculationUtilsBoundaryTest@2cb4893b]" started-at="2026-10-30T22:09:01 IST" name="testOrderUnitsRoundingAndStatusBoundary" description="Verifies CalculationUtils rounding (R6) and status derivation (R7) at boundary values absent from the client fixture data. Utility-level only; see class-level javadoc for scope." data-provider="orderUnitsBoundaries" finished-at="2026-10-30T22:09:01 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4.5E-4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0.0005]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Ready]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Exact HALF_UP tie at the 4th decimal place (ambiguous per spec; HALF_UP chosen as documented baseline)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOrderUnitsRoundingAndStatusBoundary -->
+        <test-method signature="testOrderUnitsRoundingAndStatusBoundary(double,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.CalculationUtilsBoundaryTest@2cb4893b]" started-at="2026-10-30T22:09:01 IST" name="testOrderUnitsRoundingAndStatusBoundary" description="Verifies CalculationUtils rounding (R6) and status derivation (R7) at boundary values absent from the client fixture data. Utility-level only; see class-level javadoc for scope." data-provider="orderUnitsBoundaries" finished-at="2026-10-30T22:09:01 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4.51E-4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0.0005]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Ready]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Just above the 0.0004/0.0005 boundary]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOrderUnitsRoundingAndStatusBoundary -->
+        <test-method signature="testOrderUnitsRoundingAndStatusBoundary(double,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.CalculationUtilsBoundaryTest@2cb4893b]" started-at="2026-10-30T22:09:01 IST" name="testOrderUnitsRoundingAndStatusBoundary" description="Verifies CalculationUtils rounding (R6) and status derivation (R7) at boundary values absent from the client fixture data. Utility-level only; see class-level javadoc for scope." data-provider="orderUnitsBoundaries" finished-at="2026-10-30T22:09:01 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[0.99989]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0.9999]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Ready]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Just below 1.0000]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOrderUnitsRoundingAndStatusBoundary -->
+        <test-method signature="testOrderUnitsRoundingAndStatusBoundary(double,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.CalculationUtilsBoundaryTest@2cb4893b]" started-at="2026-10-30T22:09:01 IST" name="testOrderUnitsRoundingAndStatusBoundary" description="Verifies CalculationUtils rounding (R6) and status derivation (R7) at boundary values absent from the client fixture data. Utility-level only; see class-level javadoc for scope." data-provider="orderUnitsBoundaries" finished-at="2026-10-30T22:09:01 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[0.99996]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1.0000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Ready]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Rounds up to exactly 1.0000, still non-zero -> Ready]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOrderUnitsRoundingAndStatusBoundary -->
+        <test-method signature="testOrderUnitsRoundingAndStatusBoundary(double,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.CalculationUtilsBoundaryTest@2cb4893b]" started-at="2026-10-30T22:09:01 IST" name="testOrderUnitsRoundingAndStatusBoundary" description="Verifies CalculationUtils rounding (R6) and status derivation (R7) at boundary values absent from the client fixture data. Utility-level only; see class-level javadoc for scope." data-provider="orderUnitsBoundaries" finished-at="2026-10-30T22:09:01 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[0.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0.0000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Blocked]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Exact zero (regression guard, matches member M006)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOrderUnitsRoundingAndStatusBoundary -->
+      </class> <!-- tests.CalculationUtilsBoundaryTest -->
+    </test> <!-- Calculation Utils Boundary Tests (R6/R7 Rounding, Utility-Level Only) -->
+  </suite> <!-- Contribution Portal Automation Suite -->
+</testng-results>

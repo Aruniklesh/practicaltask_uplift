@@ -1,0 +1,404 @@
+<html>
+<head>
+<title>TestNG:  Annual Contribution Calculator Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Annual Contribution Calculator Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>17/5/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Oct 30 22:08:37 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>15 seconds (15538 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.CalculatorTest.testAnnualContributionCalculator()'><b>testAnnualContributionCalculator</b><br>Test class: tests.CalculatorTest<br>Test method: Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8<br>Parameters: [TC22_InfinityAmount_AmbiguousEdgeCase] Amount literally 'Infinity'. JS Number('Infinity') is a valid, non-NaN number, so the app's isNaN-based check accepts it and renders 'Annual contribution: €∞' instead of an error. This test documents a genuine app-vs-spec mismatch (see BUG_REPORTS.md Finding F2) rather than asserting a fabricated requirement. (Input: 'Infinity', Freq: 'weekly')</td>
+<td><div><pre>java.lang.AssertionError: [TC22_InfinityAmount_AmbiguousEdgeCase] Validation error mismatch for amount=&apos;Infinity&apos;. Rule Ref: R8 (ambiguous): see BUG_REPORTS.md Finding F2 for the full analysis of this expected FAIL. expected [Enter a valid amount] but found []
+	at tests.CalculatorTest.testAnnualContributionCalculator(CalculatorTest.java:121)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+... Removed 34 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace986604358", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace986604358'><pre>java.lang.AssertionError: [TC22_InfinityAmount_AmbiguousEdgeCase] Validation error mismatch for amount=&apos;Infinity&apos;. Rule Ref: R8 (ambiguous): see BUG_REPORTS.md Finding F2 for the full analysis of this expected FAIL. expected [Enter a valid amount] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at tests.CalculatorTest.testAnnualContributionCalculator(CalculatorTest.java:121)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.CalculatorTest@2f7c2f4f</td></tr>
+<tr>
+<td title='tests.CalculatorTest.testAnnualContributionCalculator()'><b>testAnnualContributionCalculator</b><br>Test class: tests.CalculatorTest<br>Test method: Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8<br>Parameters: [TC02_FortnightlyPayment] Standard calculation with Fortnightly payment frequency (Multiplier: 26) (Input: '50.00', Freq: 'fortnightly')</td>
+<td><div><pre>java.lang.AssertionError: [TC02_FortnightlyPayment] Calculation mismatch for amount=&apos;50.00&apos;, freq=&apos;fortnightly&apos;. Rule Ref: R1: 50.00 * 26 = 1,300.00 (Note: Application defect uses 24) expected [Annual contribution: €1,300.00] but found [Annual contribution: €1,200.00]
+	at tests.CalculatorTest.testAnnualContributionCalculator(CalculatorTest.java:93)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+... Removed 34 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace292890110", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace292890110'><pre>java.lang.AssertionError: [TC02_FortnightlyPayment] Calculation mismatch for amount=&apos;50.00&apos;, freq=&apos;fortnightly&apos;. Rule Ref: R1: 50.00 * 26 = 1,300.00 (Note: Application defect uses 24) expected [Annual contribution: €1,300.00] but found [Annual contribution: €1,200.00]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at tests.CalculatorTest.testAnnualContributionCalculator(CalculatorTest.java:93)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.CalculatorTest@2f7c2f4f</td></tr>
+<tr>
+<td title='tests.CalculatorTest.testAnnualContributionCalculator()'><b>testAnnualContributionCalculator</b><br>Test class: tests.CalculatorTest<br>Test method: Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8<br>Parameters: [TC14_NegativeDecimalAmount] Validation test for negative fractional decimal amount (Input: '-10.50', Freq: 'weekly')</td>
+<td><div><pre>java.lang.AssertionError: [TC14_NegativeDecimalAmount] Validation error mismatch for amount=&apos;-10.50&apos;. Rule Ref: R8: Negative decimal must show &apos;Amount cannot be negative&apos; expected [Amount cannot be negative] but found []
+	at tests.CalculatorTest.testAnnualContributionCalculator(CalculatorTest.java:121)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+... Removed 34 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace898655932", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace898655932'><pre>java.lang.AssertionError: [TC14_NegativeDecimalAmount] Validation error mismatch for amount=&apos;-10.50&apos;. Rule Ref: R8: Negative decimal must show &apos;Amount cannot be negative&apos; expected [Amount cannot be negative] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at tests.CalculatorTest.testAnnualContributionCalculator(CalculatorTest.java:121)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.CalculatorTest@2f7c2f4f</td></tr>
+<tr>
+<td title='tests.CalculatorTest.testAnnualContributionCalculator()'><b>testAnnualContributionCalculator</b><br>Test class: tests.CalculatorTest<br>Test method: Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8<br>Parameters: [TC12_NegativeAmount] Validation test for negative contribution amount (Input: '-50.00', Freq: 'monthly')</td>
+<td><div><pre>java.lang.AssertionError: [TC12_NegativeAmount] Validation error mismatch for amount=&apos;-50.00&apos;. Rule Ref: R8: Negative amount must show &apos;Amount cannot be negative&apos; (Note: App defect fails to validate) expected [Amount cannot be negative] but found []
+	at tests.CalculatorTest.testAnnualContributionCalculator(CalculatorTest.java:121)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+... Removed 34 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace876695548", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace876695548'><pre>java.lang.AssertionError: [TC12_NegativeAmount] Validation error mismatch for amount=&apos;-50.00&apos;. Rule Ref: R8: Negative amount must show &apos;Amount cannot be negative&apos; (Note: App defect fails to validate) expected [Amount cannot be negative] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at tests.CalculatorTest.testAnnualContributionCalculator(CalculatorTest.java:121)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.CalculatorTest@2f7c2f4f</td></tr>
+<tr>
+<td title='tests.CalculatorTest.testAnnualContributionCalculator()'><b>testAnnualContributionCalculator</b><br>Test class: tests.CalculatorTest<br>Test method: Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8<br>Parameters: [TC21_HexNotationAmount_AmbiguousEdgeCase] Amount expressed as a hexadecimal literal. JS Number('0x10') parses this to 16 (not NaN), so the app's isNaN-based check does not reject it, while Java's BigDecimal does not support hex notation and throws. This test documents a genuine app-vs-spec mismatch (see BUG_REPORTS.md Finding F1) rather than asserting a fabricated requirement. (Input: '0x10', Freq: 'weekly')</td>
+<td><div><pre>java.lang.AssertionError: [TC21_HexNotationAmount_AmbiguousEdgeCase] Validation error mismatch for amount=&apos;0x10&apos;. Rule Ref: R8 (ambiguous): a hex literal is not a normal monetary numeric input; see BUG_REPORTS.md Finding F1 for the full analysis of this expected FAIL. expected [Enter a valid amount] but found []
+	at tests.CalculatorTest.testAnnualContributionCalculator(CalculatorTest.java:121)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+... Removed 34 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace424832797", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace424832797'><pre>java.lang.AssertionError: [TC21_HexNotationAmount_AmbiguousEdgeCase] Validation error mismatch for amount=&apos;0x10&apos;. Rule Ref: R8 (ambiguous): a hex literal is not a normal monetary numeric input; see BUG_REPORTS.md Finding F1 for the full analysis of this expected FAIL. expected [Enter a valid amount] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at tests.CalculatorTest.testAnnualContributionCalculator(CalculatorTest.java:121)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.CalculatorTest@2f7c2f4f</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.CalculatorTest.testAnnualContributionCalculator()'><b>testAnnualContributionCalculator</b><br>Test class: tests.CalculatorTest<br>Test method: Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8<br>Parameters: [TC16_LeadingPlusSign] Amount with an explicit leading plus sign (Input: '+25', Freq: 'monthly')</td>
+<td></td>
+<td>0</td>
+<td>tests.CalculatorTest@2f7c2f4f</td></tr>
+<tr>
+<td title='tests.CalculatorTest.testAnnualContributionCalculator()'><b>testAnnualContributionCalculator</b><br>Test class: tests.CalculatorTest<br>Test method: Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8<br>Parameters: [TC09_LargeAmount] Boundary testing with large monetary contribution amount verifying comma formatting (Input: '10000.00', Freq: 'monthly')</td>
+<td></td>
+<td>0</td>
+<td>tests.CalculatorTest@2f7c2f4f</td></tr>
+<tr>
+<td title='tests.CalculatorTest.testAnnualContributionCalculator()'><b>testAnnualContributionCalculator</b><br>Test class: tests.CalculatorTest<br>Test method: Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8<br>Parameters: [TC05_LowercaseFrequency] Payment frequency supplied in all lowercase letters (Input: '25.00', Freq: 'weekly')</td>
+<td></td>
+<td>0</td>
+<td>tests.CalculatorTest@2f7c2f4f</td></tr>
+<tr>
+<td title='tests.CalculatorTest.testAnnualContributionCalculator()'><b>testAnnualContributionCalculator</b><br>Test class: tests.CalculatorTest<br>Test method: Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8<br>Parameters: [TC01_WeeklyPayment] Standard calculation with Weekly payment frequency (Multiplier: 52) (Input: '10.00', Freq: 'weekly')</td>
+<td></td>
+<td>0</td>
+<td>tests.CalculatorTest@2f7c2f4f</td></tr>
+<tr>
+<td title='tests.CalculatorTest.testAnnualContributionCalculator()'><b>testAnnualContributionCalculator</b><br>Test class: tests.CalculatorTest<br>Test method: Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8<br>Parameters: [TC04_AnnualPayment] Standard calculation with Annual payment frequency (Multiplier: 1) (Input: '1200.00', Freq: 'annual')</td>
+<td></td>
+<td>0</td>
+<td>tests.CalculatorTest@2f7c2f4f</td></tr>
+<tr>
+<td title='tests.CalculatorTest.testAnnualContributionCalculator()'><b>testAnnualContributionCalculator</b><br>Test class: tests.CalculatorTest<br>Test method: Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8<br>Parameters: [TC03_MonthlyPayment] Standard calculation with Monthly payment frequency (Multiplier: 12) (Input: '100.00', Freq: 'monthly')</td>
+<td></td>
+<td>0</td>
+<td>tests.CalculatorTest@2f7c2f4f</td></tr>
+<tr>
+<td title='tests.CalculatorTest.testAnnualContributionCalculator()'><b>testAnnualContributionCalculator</b><br>Test class: tests.CalculatorTest<br>Test method: Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8<br>Parameters: [TC19_CommaFormattedAmountRejected] Amount using thousands-separator comma formatting, which is not a valid numeric literal (Input: '5,000', Freq: 'monthly')</td>
+<td></td>
+<td>0</td>
+<td>tests.CalculatorTest@2f7c2f4f</td></tr>
+<tr>
+<td title='tests.CalculatorTest.testAnnualContributionCalculator()'><b>testAnnualContributionCalculator</b><br>Test class: tests.CalculatorTest<br>Test method: Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8<br>Parameters: [TC13_WhitespaceAmount] Validation test for whitespace only amount (Input: '   ', Freq: 'annual')</td>
+<td></td>
+<td>0</td>
+<td>tests.CalculatorTest@2f7c2f4f</td></tr>
+<tr>
+<td title='tests.CalculatorTest.testAnnualContributionCalculator()'><b>testAnnualContributionCalculator</b><br>Test class: tests.CalculatorTest<br>Test method: Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8<br>Parameters: [TC10_BlankAmount] Validation test for blank / empty contribution amount input (Input: '', Freq: 'monthly')</td>
+<td></td>
+<td>0</td>
+<td>tests.CalculatorTest@2f7c2f4f</td></tr>
+<tr>
+<td title='tests.CalculatorTest.testAnnualContributionCalculator()'><b>testAnnualContributionCalculator</b><br>Test class: tests.CalculatorTest<br>Test method: Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8<br>Parameters: [TC20_MultipleDecimalPointsRejected] Amount with two decimal points, which is not a valid numeric literal (Input: '5..5', Freq: 'weekly')</td>
+<td></td>
+<td>0</td>
+<td>tests.CalculatorTest@2f7c2f4f</td></tr>
+<tr>
+<td title='tests.CalculatorTest.testAnnualContributionCalculator()'><b>testAnnualContributionCalculator</b><br>Test class: tests.CalculatorTest<br>Test method: Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8<br>Parameters: [TC11_AlphabeticInput] Validation test for non-numeric alphabetic input string (Input: 'abc', Freq: 'weekly')</td>
+<td></td>
+<td>0</td>
+<td>tests.CalculatorTest@2f7c2f4f</td></tr>
+<tr>
+<td title='tests.CalculatorTest.testAnnualContributionCalculator()'><b>testAnnualContributionCalculator</b><br>Test class: tests.CalculatorTest<br>Test method: Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8<br>Parameters: [TC17_ScientificNotation] Amount expressed in scientific notation (Input: '1e3', Freq: 'monthly')</td>
+<td></td>
+<td>0</td>
+<td>tests.CalculatorTest@2f7c2f4f</td></tr>
+<tr>
+<td title='tests.CalculatorTest.testAnnualContributionCalculator()'><b>testAnnualContributionCalculator</b><br>Test class: tests.CalculatorTest<br>Test method: Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8<br>Parameters: [TC06_UppercaseFrequency] Payment frequency supplied in UPPERCASE letters to the test harness. NOTE: this does NOT genuinely exercise R2 case-insensitivity in the application. The calculator's <select> only ever submits a fixed lowercase value attribute regardless of which option's visible text is matched, so the real app never receives an uppercase frequency string here. This case only proves the Selenium POM can select the right dropdown option when given mixed-case test input. True R2 coverage for this app comes only from the Members table (see MembersValidationTest, member M004) where raw mixed-case strings reach the app's lookup logic directly, and from ApplicationCoreLogicTest which calls the app's own annualFor() function directly via JavaScript to bypass this UI constraint. (Input: '200.00', Freq: 'MONTHLY')</td>
+<td></td>
+<td>0</td>
+<td>tests.CalculatorTest@2f7c2f4f</td></tr>
+<tr>
+<td title='tests.CalculatorTest.testAnnualContributionCalculator()'><b>testAnnualContributionCalculator</b><br>Test class: tests.CalculatorTest<br>Test method: Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8<br>Parameters: [TC18_LeadingZeros] Amount with leading zeros (Input: '007', Freq: 'annual')</td>
+<td></td>
+<td>0</td>
+<td>tests.CalculatorTest@2f7c2f4f</td></tr>
+<tr>
+<td title='tests.CalculatorTest.testAnnualContributionCalculator()'><b>testAnnualContributionCalculator</b><br>Test class: tests.CalculatorTest<br>Test method: Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8<br>Parameters: [TC07_ZeroAmount] Boundary value testing with Zero contribution amount (Input: '0', Freq: 'weekly')</td>
+<td></td>
+<td>0</td>
+<td>tests.CalculatorTest@2f7c2f4f</td></tr>
+<tr>
+<td title='tests.CalculatorTest.testAnnualContributionCalculator()'><b>testAnnualContributionCalculator</b><br>Test class: tests.CalculatorTest<br>Test method: Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8<br>Parameters: [TC15_TrailingDecimalPoint] Amount with a trailing decimal point and no fractional digits (Input: '5.', Freq: 'weekly')</td>
+<td></td>
+<td>0</td>
+<td>tests.CalculatorTest@2f7c2f4f</td></tr>
+<tr>
+<td title='tests.CalculatorTest.testAnnualContributionCalculator()'><b>testAnnualContributionCalculator</b><br>Test class: tests.CalculatorTest<br>Test method: Data-driven test verifying Annual Contribution Calculator against Rules R1, R2, R3, and R8<br>Parameters: [TC08_DecimalAmount] Calculation with fractional decimal contribution amount (Input: '75.50', Freq: 'monthly')</td>
+<td></td>
+<td>0</td>
+<td>tests.CalculatorTest@2f7c2f4f</td></tr>
+</table><p>
+</body>
+</html>
