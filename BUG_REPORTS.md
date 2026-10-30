@@ -157,4 +157,8 @@ BUG-001 through BUG-004.
 
 ## Daily Update (Slack, max 5 lines)
 
-> Completed the QA automation assessment and a follow-up independent audit for the Contribution Portal. Java/Selenium/TestNG suite (POM, Jackson, ExtentReports) now runs 54 tests — 38 passed, 16 failed, 0 framework errors — covering the calculator (22 cases), Members table (9 checks incl. a new table-integrity test), and a new direct-JS-invocation suite that proves R1/R2 coverage the UI alone can't reach. 4 confirmed defects (fortnightly multiplier, case-sensitive frequency lookup — now proven systemic across all 4 frequencies, missing negative-amount validation, Order Status using unrounded units) plus 2 documented spec-ambiguity findings (hex/"Infinity" input). Reports, bug log, traceability matrix, and docs are ready for submission.
+> Built and independently audited the Contribution Portal QA suite (Java/Selenium/TestNG, POM, Jackson, ExtentReports).
+> Ran 54 tests: 38 passed, 16 failed, 0 framework errors — covering the calculator (22 cases), Members table (9 checks), and a new suite that proves case-insensitivity coverage the UI alone can't reach.
+> Found 4 confirmed defects: fortnightly multiplier (24 vs 26), case-sensitive frequency lookup (now proven systemic across all 4 frequencies), missing negative-amount validation, and Order Status using unrounded units.
+> Also documented 2 spec-ambiguity findings (hex/"Infinity" input) separately from the confirmed defects.
+> Reports, bug log, traceability matrix, and docs are ready for submission.
