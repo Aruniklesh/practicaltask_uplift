@@ -1,0 +1,200 @@
+[
+  {
+    "testCaseId": "TC01_WeeklyPayment",
+    "description": "Standard calculation with Weekly payment frequency (Multiplier: 52)",
+    "amountInput": "10.00",
+    "frequency": "weekly",
+    "expectedType": "SUCCESS",
+    "expectedResult": "Annual contribution: €520.00",
+    "ruleReference": "R1: 10.00 * 52 = 520.00"
+  },
+  {
+    "testCaseId": "TC02_FortnightlyPayment",
+    "description": "Standard calculation with Fortnightly payment frequency (Multiplier: 26)",
+    "amountInput": "50.00",
+    "frequency": "fortnightly",
+    "expectedType": "SUCCESS",
+    "expectedResult": "Annual contribution: €1,300.00",
+    "ruleReference": "R1: 50.00 * 26 = 1,300.00 (Note: Application defect uses 24)"
+  },
+  {
+    "testCaseId": "TC03_MonthlyPayment",
+    "description": "Standard calculation with Monthly payment frequency (Multiplier: 12)",
+    "amountInput": "100.00",
+    "frequency": "monthly",
+    "expectedType": "SUCCESS",
+    "expectedResult": "Annual contribution: €1,200.00",
+    "ruleReference": "R1: 100.00 * 12 = 1,200.00"
+  },
+  {
+    "testCaseId": "TC04_AnnualPayment",
+    "description": "Standard calculation with Annual payment frequency (Multiplier: 1)",
+    "amountInput": "1200.00",
+    "frequency": "annual",
+    "expectedType": "SUCCESS",
+    "expectedResult": "Annual contribution: €1,200.00",
+    "ruleReference": "R1: 1200.00 * 1 = 1,200.00"
+  },
+  {
+    "testCaseId": "TC05_LowercaseFrequency",
+    "description": "Payment frequency supplied in all lowercase letters",
+    "amountInput": "25.00",
+    "frequency": "weekly",
+    "expectedType": "SUCCESS",
+    "expectedResult": "Annual contribution: €1,300.00",
+    "ruleReference": "R1 & R2: 25.00 * 52 = 1,300.00"
+  },
+  {
+    "testCaseId": "TC06_UppercaseFrequency",
+    "description": "Payment frequency supplied in UPPERCASE letters to the test harness. NOTE: this does NOT genuinely exercise R2 case-insensitivity in the application. The calculator's <select> only ever submits a fixed lowercase value attribute regardless of which option's visible text is matched, so the real app never receives an uppercase frequency string here. This case only proves the Selenium POM can select the right dropdown option when given mixed-case test input. True R2 coverage for this app comes only from the Members table (see MembersValidationTest, member M004) where raw mixed-case strings reach the app's lookup logic directly, and from ApplicationCoreLogicTest which calls the app's own annualFor() function directly via JavaScript to bypass this UI constraint.",
+    "amountInput": "200.00",
+    "frequency": "MONTHLY",
+    "expectedType": "SUCCESS",
+    "expectedResult": "Annual contribution: €2,400.00",
+    "ruleReference": "R1 (dropdown-selection robustness only — NOT a genuine R2 case-insensitivity test; see description)"
+  },
+  {
+    "testCaseId": "TC07_ZeroAmount",
+    "description": "Boundary value testing with Zero contribution amount",
+    "amountInput": "0",
+    "frequency": "weekly",
+    "expectedType": "SUCCESS",
+    "expectedResult": "Annual contribution: €0.00",
+    "ruleReference": "R8: Zero is explicitly allowed"
+  },
+  {
+    "testCaseId": "TC08_DecimalAmount",
+    "description": "Calculation with fractional decimal contribution amount",
+    "amountInput": "75.50",
+    "frequency": "monthly",
+    "expectedType": "SUCCESS",
+    "expectedResult": "Annual contribution: €906.00",
+    "ruleReference": "R1 & R3: 75.50 * 12 = 906.00"
+  },
+  {
+    "testCaseId": "TC09_LargeAmount",
+    "description": "Boundary testing with large monetary contribution amount verifying comma formatting",
+    "amountInput": "10000.00",
+    "frequency": "monthly",
+    "expectedType": "SUCCESS",
+    "expectedResult": "Annual contribution: €120,000.00",
+    "ruleReference": "R1 & R3: 10000.00 * 12 = 120,000.00"
+  },
+  {
+    "testCaseId": "TC10_BlankAmount",
+    "description": "Validation test for blank / empty contribution amount input",
+    "amountInput": "",
+    "frequency": "monthly",
+    "expectedType": "ERROR",
+    "expectedResult": "Enter a valid amount",
+    "ruleReference": "R8: Blank amount must show 'Enter a valid amount'"
+  },
+  {
+    "testCaseId": "TC11_AlphabeticInput",
+    "description": "Validation test for non-numeric alphabetic input string",
+    "amountInput": "abc",
+    "frequency": "weekly",
+    "expectedType": "ERROR",
+    "expectedResult": "Enter a valid amount",
+    "ruleReference": "R8: Non-numeric input must show 'Enter a valid amount'"
+  },
+  {
+    "testCaseId": "TC12_NegativeAmount",
+    "description": "Validation test for negative contribution amount",
+    "amountInput": "-50.00",
+    "frequency": "monthly",
+    "expectedType": "ERROR",
+    "expectedResult": "Amount cannot be negative",
+    "ruleReference": "R8: Negative amount must show 'Amount cannot be negative' (Note: App defect fails to validate)"
+  },
+  {
+    "testCaseId": "TC13_WhitespaceAmount",
+    "description": "Validation test for whitespace only amount",
+    "amountInput": "   ",
+    "frequency": "annual",
+    "expectedType": "ERROR",
+    "expectedResult": "Enter a valid amount",
+    "ruleReference": "R8: Whitespace input treated as blank"
+  },
+  {
+    "testCaseId": "TC14_NegativeDecimalAmount",
+    "description": "Validation test for negative fractional decimal amount",
+    "amountInput": "-10.50",
+    "frequency": "weekly",
+    "expectedType": "ERROR",
+    "expectedResult": "Amount cannot be negative",
+    "ruleReference": "R8: Negative decimal must show 'Amount cannot be negative'"
+  },
+  {
+    "testCaseId": "TC15_TrailingDecimalPoint",
+    "description": "Amount with a trailing decimal point and no fractional digits",
+    "amountInput": "5.",
+    "frequency": "weekly",
+    "expectedType": "SUCCESS",
+    "expectedResult": "Annual contribution: €260.00",
+    "ruleReference": "R1: 5 * 52 = 260.00. Verified JS Number('5.') and Java BigDecimal('5.') both parse to 5 consistently."
+  },
+  {
+    "testCaseId": "TC16_LeadingPlusSign",
+    "description": "Amount with an explicit leading plus sign",
+    "amountInput": "+25",
+    "frequency": "monthly",
+    "expectedType": "SUCCESS",
+    "expectedResult": "Annual contribution: €300.00",
+    "ruleReference": "R1: 25 * 12 = 300.00. Verified '+25' parses to 25 consistently in both JS and BigDecimal."
+  },
+  {
+    "testCaseId": "TC17_ScientificNotation",
+    "description": "Amount expressed in scientific notation",
+    "amountInput": "1e3",
+    "frequency": "monthly",
+    "expectedType": "SUCCESS",
+    "expectedResult": "Annual contribution: €12,000.00",
+    "ruleReference": "R1/R3: 1000 * 12 = 12,000.00. Verified '1e3' parses to 1000 consistently in both JS Number() and BigDecimal."
+  },
+  {
+    "testCaseId": "TC18_LeadingZeros",
+    "description": "Amount with leading zeros",
+    "amountInput": "007",
+    "frequency": "annual",
+    "expectedType": "SUCCESS",
+    "expectedResult": "Annual contribution: €7.00",
+    "ruleReference": "R1: 7 * 1 = 7.00. Verified '007' parses to 7 consistently in both JS and BigDecimal."
+  },
+  {
+    "testCaseId": "TC19_CommaFormattedAmountRejected",
+    "description": "Amount using thousands-separator comma formatting, which is not a valid numeric literal",
+    "amountInput": "5,000",
+    "frequency": "monthly",
+    "expectedType": "ERROR",
+    "expectedResult": "Enter a valid amount",
+    "ruleReference": "R8: Confirmed JS Number('5,000') and Java BigDecimal('5,000') both reject this as non-numeric; robustness check, not a defect."
+  },
+  {
+    "testCaseId": "TC20_MultipleDecimalPointsRejected",
+    "description": "Amount with two decimal points, which is not a valid numeric literal",
+    "amountInput": "5..5",
+    "frequency": "weekly",
+    "expectedType": "ERROR",
+    "expectedResult": "Enter a valid amount",
+    "ruleReference": "R8: Confirmed JS Number('5..5') and Java BigDecimal('5..5') both reject this as non-numeric; robustness check, not a defect."
+  },
+  {
+    "testCaseId": "TC21_HexNotationAmount_AmbiguousEdgeCase",
+    "description": "Amount expressed as a hexadecimal literal. JS Number('0x10') parses this to 16 (not NaN), so the app's isNaN-based check does not reject it, while Java's BigDecimal does not support hex notation and throws. This test documents a genuine app-vs-spec mismatch (see BUG_REPORTS.md Finding F1) rather than asserting a fabricated requirement.",
+    "amountInput": "0x10",
+    "frequency": "weekly",
+    "expectedType": "ERROR",
+    "expectedResult": "Enter a valid amount",
+    "ruleReference": "R8 (ambiguous): a hex literal is not a normal monetary numeric input; see BUG_REPORTS.md Finding F1 for the full analysis of this expected FAIL."
+  },
+  {
+    "testCaseId": "TC22_InfinityAmount_AmbiguousEdgeCase",
+    "description": "Amount literally 'Infinity'. JS Number('Infinity') is a valid, non-NaN number, so the app's isNaN-based check accepts it and renders 'Annual contribution: €∞' instead of an error. This test documents a genuine app-vs-spec mismatch (see BUG_REPORTS.md Finding F2) rather than asserting a fabricated requirement.",
+    "amountInput": "Infinity",
+    "frequency": "weekly",
+    "expectedType": "ERROR",
+    "expectedResult": "Enter a valid amount",
+    "ruleReference": "R8 (ambiguous): see BUG_REPORTS.md Finding F2 for the full analysis of this expected FAIL."
+  }
+]

@@ -1,0 +1,18 @@
+# Maven build output — regenerate any time with `mvn clean test`.
+# Only the test reports are kept as submission evidence; everything else
+# (compiled classes, generated sources, maven-status) is pure build byproduct.
+target/*
+!target/surefire-reports/
+!target/surefire-reports/**
+!target/extent-reports/
+!target/extent-reports/**
+target/surefire-reports/*.dumpstream
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db

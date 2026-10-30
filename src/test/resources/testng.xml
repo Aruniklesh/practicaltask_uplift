@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Contribution Portal Automation Suite" verbose="1">
+
+    <test name="Annual Contribution Calculator Tests">
+        <classes>
+            <class name="tests.CalculatorTest"/>
+        </classes>
+    </test>
+
+    <test name="Members Table Verification Tests">
+        <classes>
+            <class name="tests.MembersValidationTest"/>
+        </classes>
+    </test>
+
+    <test name="Application Core Logic Tests (Direct JS Invocation - R1/R2 Case Variants)">
+        <classes>
+            <class name="tests.ApplicationCoreLogicTest"/>
+        </classes>
+    </test>
+
+    <test name="Calculation Utils Boundary Tests (R6/R7 Rounding, Utility-Level Only)">
+        <classes>
+            <class name="tests.CalculationUtilsBoundaryTest"/>
+        </classes>
+    </test>
+
+</suite>

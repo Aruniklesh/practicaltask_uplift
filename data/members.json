@@ -1,0 +1,10 @@
+[
+  { "memberId": "M001", "name": "Aoife Byrne",    "frequency": "weekly",      "contributionAmount": 10,    "unitsHeld": 152.4381925, "unitPrice": 3.4567, "nextOrderUnits": 1.2345678 },
+  { "memberId": "M002", "name": "Liam Walsh",     "frequency": "fortnightly", "contributionAmount": 50,    "unitsHeld": 980.1234567, "unitPrice": 2.1189, "nextOrderUnits": 4.5 },
+  { "memberId": "M003", "name": "Siobhan Kelly",  "frequency": "monthly",     "contributionAmount": 200,   "unitsHeld": 2450.75,     "unitPrice": 1.9874, "nextOrderUnits": 12.0004 },
+  { "memberId": "M004", "name": "Conor Doyle",    "frequency": "Monthly",     "contributionAmount": 150,   "unitsHeld": 610.0000001, "unitPrice": 4.0021, "nextOrderUnits": 3.25 },
+  { "memberId": "M005", "name": "Niamh Ryan",     "frequency": "annual",      "contributionAmount": 1200,  "unitsHeld": 75.9876543,  "unitPrice": 15.2,   "nextOrderUnits": 0.75 },
+  { "memberId": "M006", "name": "Sean Murphy",    "frequency": "weekly",      "contributionAmount": 0,     "unitsHeld": 0,           "unitPrice": 3.4567, "nextOrderUnits": 0 },
+  { "memberId": "M007", "name": "Ciara Nolan",    "frequency": "monthly",     "contributionAmount": 75.5,  "unitsHeld": 333.3333333, "unitPrice": 2.75,   "nextOrderUnits": 0.00004 },
+  { "memberId": "M008", "name": "Darragh Quinn",  "frequency": "fortnightly", "contributionAmount": 25,    "unitsHeld": 1.0000005,   "unitPrice": 9.9999, "nextOrderUnits": 0.00006 }
+]

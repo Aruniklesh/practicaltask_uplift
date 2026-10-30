@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contribution Portal (QA Task)</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 24px; color: #222; background: #fff; }
+  h1 { font-size: 22px; } h2 { font-size: 18px; margin-top: 32px; }
+  label { display: inline-block; min-width: 140px; }
+  input, select, button { padding: 6px 8px; font-size: 14px; margin: 4px 0; }
+  #annual-result { font-weight: bold; margin-top: 8px; }
+  #error-msg { color: #b00020; margin-top: 8px; }
+  table { border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  th, td { border: 1px solid #ccc; padding: 6px 10px; text-align: left; }
+  th { background: #f2f2f2; }
+</style>
+</head>
+<body>
+<h1>Contribution Portal</h1>
+
+<section id="calculator">
+  <h2>Annual Contribution Calculator</h2>
+  <div><label for="amount">Contribution amount (€)</label><input id="amount" type="text" placeholder="e.g. 10"></div>
+  <div><label for="frequency">Payment frequency</label>
+    <select id="frequency">
+      <option value="weekly">Weekly</option>
+      <option value="fortnightly">Fortnightly</option>
+      <option value="monthly">Monthly</option>
+      <option value="annual">Annual</option>
+    </select>
+  </div>
+  <button id="calculate">Calculate</button>
+  <div id="annual-result"></div>
+  <div id="error-msg"></div>
+</section>
+
+<section id="members">
+  <h2>Members</h2>
+  <table id="members-table">
+    <thead>
+      <tr>
+        <th>Member ID</th><th>Name</th><th>Frequency</th><th>Contribution</th>
+        <th>Annual Contribution</th><th>Units Held</th><th>Unit Price</th>
+        <th>Fund Value</th><th>Next Order Units</th><th>Order Status</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+<script>
+  const MULTIPLIERS = { weekly: 52, fortnightly: 24, monthly: 12, annual: 1 };
+
+  function eur(n) {
+    return '€' + n.toLocaleString('en-IE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  function annualFor(amount, frequency) {
+    const m = MULTIPLIERS[frequency] || 52;
+    return amount * m;
+  }
+
+  document.getElementById('calculate').addEventListener('click', () => {
+    const raw = document.getElementById('amount').value.trim();
+    const freq = document.getElementById('frequency').value;
+    const result = document.getElementById('annual-result');
+    const error = document.getElementById('error-msg');
+    result.textContent = ''; error.textContent = '';
+    const amount = Number(raw);
+    if (raw === '' || isNaN(amount)) {
+      error.textContent = 'Enter a valid amount';
+      return;
+    }
+    result.textContent = 'Annual contribution: ' + eur(annualFor(amount, freq));
+  });
+
+  function cell(row, col, text) {
+    const td = document.createElement('td');
+    td.setAttribute('data-col', col);
+    td.textContent = text;
+    row.appendChild(td);
+  }
+
+  fetch('data/members.json')
+    .then(r => r.json())
+    .then(members => {
+      const tbody = document.querySelector('#members-table tbody');
+      members.forEach(m => {
+        const tr = document.createElement('tr');
+        tr.setAttribute('data-member-id', m.memberId);
+        const orderUnits = Math.round(m.nextOrderUnits * 10000) / 10000;
+        const status = m.nextOrderUnits > 0 ? 'Ready' : 'Blocked';
+        cell(tr, 'member-id', m.memberId);
+        cell(tr, 'name', m.name);
+        cell(tr, 'frequency', m.frequency);
+        cell(tr, 'contribution', eur(m.contributionAmount));
+        cell(tr, 'annual', eur(annualFor(m.contributionAmount, m.frequency)));
+        cell(tr, 'units', m.unitsHeld.toFixed(7));
+        cell(tr, 'price', eur(m.unitPrice));
+        cell(tr, 'value', eur(m.unitsHeld * m.unitPrice));
+        cell(tr, 'order-units', orderUnits.toFixed(4));
+        cell(tr, 'order-status', status);
+        tbody.appendChild(tr);
+      });
+    })
+    .catch(() => {
+      document.querySelector('#members-table tbody').innerHTML =
+        '<tr><td colspan="10">Could not load data. Run a local web server (see README).</td></tr>';
+    });
+</script>
+</body>
+</html>
